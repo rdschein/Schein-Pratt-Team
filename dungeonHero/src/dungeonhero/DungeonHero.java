@@ -14,13 +14,13 @@ public class DungeonHero {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player playerOne = new Player();
+        Player playerOne = new Player(); // sets up player
         
-        playerOne.setName("Rob Pratt");
+        playerOne.setName("Rob Pratt");  // setting the values
         playerOne.setGameOverCount(7);
         
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
+        String playerInfo = playerOne.toString(); // Printing it out
+        System.out.println(playerInfo); 
     }
     
 }
