@@ -17,6 +17,7 @@ public class DungeonHero {
         Player playerOne = new Player();
         
         playerOne.setName("Rob Pratt");
+        playerOne.setGameOverCount(7);
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
