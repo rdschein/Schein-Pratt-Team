@@ -21,6 +21,20 @@ public class DungeonHero {
         
         String playerInfo = playerOne.toString(); // Printing it out
         System.out.println(playerInfo); 
+        
+        // for the Location
+        Location start = new Location();
+        
+        start.setColumn(5);
+        start.setRow(1);
+        start.setVisited(true);
+        
+        
+        String startInfo = start.toString();
+        System.out.println(startInfo);
+        
+        
+        
     }
     
 }
