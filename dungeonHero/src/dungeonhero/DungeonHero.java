@@ -34,6 +34,16 @@ public class DungeonHero {
         System.out.println(startInfo);
         
         
+        // for the map
+        
+        Map dungeon = new Map();
+        
+        dungeon.setNumOfCol(10);
+        dungeon.setNumOfRows(5);
+        
+        String mapInfo = dungeon.toString();
+        System.out.println(mapInfo);
+        
         
     }
     
