@@ -44,6 +44,43 @@ public class DungeonHero {
         String mapInfo = dungeon.toString();
         System.out.println(mapInfo);
         
+        // for the Enemies
+        Enemies goblin = new Enemies();
+        
+        goblin.setType("Bad Guy");
+        goblin.setAttributes("Green");
+        
+        String goblinInfo = goblin.toString();
+        System.out.println(goblinInfo);
+        
+        // for the items
+        
+        Items bow = new Items();
+        
+        bow.setInventoryType("Located at 1-1");
+        bow.setAmountRequired(30);
+        bow.setQuantity(50);
+        
+        String bowInfo = bow.toString();
+        System.out.println(bowInfo);
+        
+        // for the scene
+        
+        Scene puzzle = new Scene();
+        
+        puzzle.setSceneType("Puzzle");
+        puzzle.setSceneName("Death Trap");
+        puzzle.setBlockedLocation("1-2");
+        puzzle.setDescription("It's Awesome");
+        
+        String puzzleInfo = puzzle.toString();
+        System.out.println(puzzleInfo);
+        
+        
+        
+        
+        
+        
         
         
         
