@@ -4,20 +4,20 @@
  * and open the template in the editor.
  */
 package dungeonhero.control;
-import java.util.Scanner;
 /**
  *
  * @author Rob
  */
 public class LocationControl {
     
-    public double getRandomRow(int row) {
+    public int getRandomRow(int row) {
         
         row = row + 3;
-        while (row >= 5) {
+        
+        while (row > 5) {
             row = row - 5;
         }
-        while (row <= 1) {
+        while (row < 1) {
             row = row + 4;
         }
        
