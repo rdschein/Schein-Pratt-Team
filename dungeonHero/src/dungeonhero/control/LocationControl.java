@@ -23,4 +23,20 @@ public class LocationControl {
        
         return row;
     }
+    
+    public int getRandomCol(int col) {
+        // Dylan wrote this function
+        // Dyaln wrote this function
+    
+    col = col + 7;
+    
+    while(col > 10){
+    col = col - 7;
+    }
+    while(col < 1){
+    col = col + 4;
+    }
+    return col;
+    
+    }
 }
