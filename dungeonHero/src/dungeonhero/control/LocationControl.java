@@ -28,7 +28,7 @@ public class LocationControl {
         // Dylan wrote this function
         // Dyaln wrote this function
     
-    col = col + 7;
+    col = col + 5;
     
     while(col > 10){
     col = col - 7;
