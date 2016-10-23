@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package dungeonhero.control;
-
+  
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+  
 /**
  *
  * @author Dylan
@@ -16,7 +16,7 @@ public class LocationControlTest {
     
     public LocationControlTest() {
     }
-
+  
     /**
      * Test of getRandomRow method, of class LocationControl.
      */
@@ -77,5 +77,67 @@ public class LocationControlTest {
         
         assertEquals(expResult, result, 0.0);
     }
+  
+    /**
+     * Test of getRandomCol method, of class LocationControl.
+     */
+    @Test
+    public void testGetRandomCol() {
+        System.out.println("getRandomCol");
+        int col = 2;
+        
+        LocationControl instance = new LocationControl();
+        int expResult = 7;
+        
+        int result = instance.getRandomCol(col);
+        
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+        
+        // test 2
+        System.out.println("\tTest case #2");
+        
+        col = -7;
+        //-2
+        expResult = 4;
+        
+        result = instance.getRandomRow(col);
+        
+        assertEquals(expResult, result, 0.0);
+        
+        // test 3
+        System.out.println("\tTest case #3");
+        
+        col = 14;
+        //
+        expResult = 2;
+        
+        result = instance.getRandomRow(col);
+        
+        assertEquals(expResult, result, 0.0);
+        
+        // test 4
+        System.out.println("\tTest case #4");
+        
+        col = 1;
+        //
+        expResult = 4;
+        
+        result = instance.getRandomRow(col);
+        
+        assertEquals(expResult, result, 0.0);
+        
+        // test 3
+        System.out.println("\tTest case #3");
+        
+        col = 10;
+        //15
+        expResult = 3;
+        
+        result = instance.getRandomRow(col);
+        
+        assertEquals(expResult, result, 0.0);
+    }
     
-}
+}    
