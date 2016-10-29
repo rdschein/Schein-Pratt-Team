@@ -5,6 +5,7 @@
  */
 package dungeonhero.control;
 
+import dungeonhero.DungeonHero;
 import dungeonhero.Player;
 
 /**
@@ -13,9 +14,22 @@ import dungeonhero.Player;
  */
 public class GameControl {
 
-    public static Player createPlayer(String playersName) {
-        System.out.println("\n*** createPlayer() function called ***");
-        return new Player();
+    public static Player createPlayer(String name) {
+        //public static Player createPlayer(string name){
+        
+            if (name == null){
+                return null;
+            }
+        
+            Player player = new Player();
+            player.setName(name);
+            
+            DungeonHero.setPlayer(player);
+            
+            return player;
+        }
+
+    public static void createNewGame(Player player) {
+     System.out.println("create newGame called");
     }
-    
-}
+    }

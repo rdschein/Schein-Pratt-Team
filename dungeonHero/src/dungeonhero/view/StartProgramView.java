@@ -106,7 +106,34 @@ public class StartProgramView {
     }
 
     private void displayNextView(Player player) {
-        System.out.println("\n*** displayNextView() called ***");
+        System.out.println("\n==================================================================="
+                         + "\nAt Long last you have found the underworld dungeon! After         "
+                         + "\nsearching the Underworld far and wid e you have finally found     "
+                         + "\nthe entrance to the dungeon. Inside you will need to explore.     "
+                         + "\nLegends tell of how the Underworld Overlord has collected all     "
+                         + "\nthe weapons needed to defeat him and hid them deep within the     "
+                         + "\ndungeon. The most importantof these weapons being the Enchanted   "
+                         + "\nSword."
+                         + "\n                                                                    "
+                         + "\nThe items you will need to progress through the dungeon are inside."
+                         + "\nAs you find more items you will be able to progress deeper into   "
+                         + "\nthe dungeon. You must keep your wits about you. There are many    "
+                         + "\nsecrets hidden within the dungeon. Everything is not what it seems."
+                         + "\nThe adventrue is over once you have found the Underworld OverLord  "
+                         + "\n and defeated him, thuse saving the land and the Princess."
+                         + "\n                                                                     "
+                         + "\nYour adventure will also end if you die trying."
+                         + "\n" + player.getName() + " As you approach the doors to this evil     "
+                         + "\nperilous place a shiver runs down your spine. You can hear whispers"
+                         + "\ninside. You draw your sword. With one last deep breath, you enter  "
+                         +"\nthe Dungeon."
+                         + "\n=====================================================================" );
+    
+        //Ceate MainMenuView object
+        MainMenuView mainMenuView = new MainMenuView();
+        
+        // display
+        mainMenuView.displayMainMenuView();
     }
 
     

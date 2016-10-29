@@ -12,7 +12,24 @@ import dungeonhero.view.StartProgramView;
  * @author Rob and Dylan
  */
 public class DungeonHero {
+    private static Game currentGame = null;
 
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        DungeonHero.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        DungeonHero.player = player;
+    }
+    private static Player player = null;
     /**
      * @param args the command line arguments
      */
