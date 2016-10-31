@@ -54,7 +54,7 @@ public class StartProgramView {
      System.out.println(
      "\n**********************************************************************"
    + "\n*                                                                    *"
-   + "\n*Dungeon Heroes is a text based action role palying game. You will   *"
+   + "\n*Dungeon Heroes is a text based action role playing game. You will   *"
    + "\n*need to explore the dungeon and find hidden items to reveal the     *"
    + "\n*secrets of the Dungeon. Have Courage and Conquer the Dungeon!       *"
    + "\n*                                                                    *"
