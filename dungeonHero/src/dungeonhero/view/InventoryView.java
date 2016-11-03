@@ -8,13 +8,15 @@ import dungeonhero.control.GameControl;
 import dungeonhero.Player;
 import java.util.Scanner;
 import dungeonhero.DungeonHero;
+import dungeonhero.view.GameMenuView;
+
 /**
  *
  * @author Rob
  */
 public class InventoryView {
     
-    private String inventory;
+    public String inventory;
     
     public InventoryView() {
         this.inventory = "\n"
