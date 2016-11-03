@@ -42,8 +42,7 @@ class GameMenuView {
             // do the requested action and display the next view
             done = this.doAction(menuOption);
         }while(!done);
-        
-            
+               
     }
 
     private String getMenuOption() {
@@ -79,7 +78,8 @@ class GameMenuView {
                 inventory.displayInventory();
                 break;
             case "A":
-                System.out.println("Enter command");
+                ActionInputView action = new ActionInputView();
+                action.displayActionInputView();
                 break;
             case "H":
                 System.out.println("Help Menu called here");
