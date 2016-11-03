@@ -37,9 +37,10 @@ public class MainMenuView {
         do{
             //prompt for and get players name
             String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("E"))
+            if (menuOption.toUpperCase().equals("E")){
+                System.out.println(menu);
                 return; // exit game
-            
+            }
             // do the requested action and display the next view
             done = this.doAction(menuOption);
         }while(!done);
