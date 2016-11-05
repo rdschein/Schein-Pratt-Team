@@ -53,13 +53,16 @@ class ActionInputView {
                 switch(choice){
             case "attack": // creat new game
                 System.out.println("attack funtion is called");
+                getAttackOption();
                 break;
             case "use item":
                 System.out.println("use on what");
+                getUseOption();
                 //if
                 break;
             case "Examine":
                 System.out.println("What do you want to examine?");
+                getExamineOption();
                 //if
                 break;
                 
