@@ -11,6 +11,7 @@ package dungeonhero.control;
 public class LocationControl {
     
     public int getRandomRow(int row) {
+        // Rob wrote this function
         
         row = row + 3;
         
