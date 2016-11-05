@@ -21,11 +21,11 @@ class HelpMenuView {
                   + "\n---------------------------------"
                   + "\n  Help Menu                      "
                   + "\n---------------------------------"
-                  + "\nH-How to Play"
-                  + "\nM-How to Move?"
-                  + "\nL-What to look for?"
-                  + "\nI-Finding items"
-                  + "\nQ-Exit help menu"
+                  + "\nH-How to Play                    "
+                  + "\nM-How to Move?                   "
+                  + "\nL-What to look for?              "
+                  + "\nI-Finding items                  "
+                  + "\nQ-Exit help menu                 "
                   + "\n---------------------------------";
  }
 
