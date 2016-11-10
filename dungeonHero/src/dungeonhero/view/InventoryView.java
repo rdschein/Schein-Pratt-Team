@@ -16,7 +16,7 @@ import dungeonhero.view.GameMenuView;
  */
 public class InventoryView extends View {
     
-    public String inventory;
+    public String menu;
     
     public InventoryView() {
          super("\n"
@@ -33,10 +33,7 @@ public class InventoryView extends View {
                            + "\n---------------------------------");
                             
     }
-    @Override
-    public void display() {
-        System.out.println(inventory); 
-    }
+  
 
     @Override
     public boolean doAction(String value) {
