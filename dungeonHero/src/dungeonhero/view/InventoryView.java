@@ -14,12 +14,12 @@ import dungeonhero.view.GameMenuView;
  *
  * @author Rob
  */
-public class InventoryView {
+public class InventoryView extends View {
     
     public String inventory;
     
     public InventoryView() {
-        this.inventory = "\n"
+         super("\n"
                            + "\n---------------------------------"
                            + "\n  Inventory                      "
                            + "\n---------------------------------"
@@ -30,12 +30,17 @@ public class InventoryView {
                            + "\nHarp- "
                            + "\nEnchanted Sword- "
                            + "\nKey- "
-                           + "\n---------------------------------";
+                           + "\n---------------------------------");
                             
     }
-    
-    void displayInventory() {
+    @Override
+    public void display() {
         System.out.println(inventory); 
+    }
+
+    @Override
+    public boolean doAction(String value) {
+        return false;
     }
 
    

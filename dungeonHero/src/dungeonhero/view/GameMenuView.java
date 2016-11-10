@@ -36,7 +36,7 @@ public class GameMenuView extends View {
                 break;
             case "I":
                 InventoryView inventory = new InventoryView();
-                inventory.displayInventory();
+                inventory.display();
                 break;
             case "A":
                 ActionInputView action = new ActionInputView();
