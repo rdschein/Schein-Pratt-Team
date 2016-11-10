@@ -10,46 +10,11 @@ import java.util.Scanner;
  *
  * @author Dylan Pratt
  */
-class ActionInputView {
+public class ActionInputView extends View {
 
-    void displayActionInputView() {
-        boolean done = false;
-        do{
-            //prompt for and get players name
-            String menuOption = this.getInput();
-            if (menuOption.toUpperCase().equals("Q")){
-                //MainMenuView MainMenu = new MainMenuView();
-                //MainMenu.displayMainMenuView();
-                return; // exit game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-        }while(!done);
-        
-    }
-
-    private String getInput() {
-        Scanner keyboard = new Scanner(System.in); // get from keyboard
-       String value ="";// returned name
-       boolean valid = false;
-       
-       while(!valid){
-           System.out.println("\nENTER COMMAND HERE (all lower case):");
-           
-           value = keyboard.nextLine();
-           value = value.trim();
-           
-           if(value.length()<1){
-               System.out.println("\nInvalid value: value can not be blank");
-               continue;
-           }
-       
-           break; // end loop
-       }
-       return value;
-    }
-
-    private boolean doAction(String choice) {
+    
+@Override
+    public boolean doAction(String choice) {
                 switch(choice){
             case "attack": // creat new game
                 System.out.println("attack funtion is called");

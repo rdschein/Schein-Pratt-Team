@@ -12,12 +12,12 @@ import dungeonhero.view.MainMenuView;
  *
  * @author Dylan
  */
-class HelpMenuView {
+public class HelpMenuView extends View {
     
     private String menu;
     
     public HelpMenuView(){   
-    this.menu = "\n"
+    super( "\n"
                   + "\n---------------------------------"
                   + "\n  Help Menu                      "
                   + "\n---------------------------------"
@@ -26,49 +26,11 @@ class HelpMenuView {
                   + "\nL-What to look for?              "
                   + "\nI-Finding items                  "
                   + "\nQ-Exit help menu                 "
-                  + "\n---------------------------------";
+                  + "\n---------------------------------");
  }
 
-    void displayHelpMenu() {
-        
-        System.out.println(menu);
-        
-        boolean done = false;
-        do{
-            //prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")){
-                MainMenuView MainMenu = new MainMenuView();
-                MainMenu.displayMainMenuView();
-                return; // exit game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-        }while(!done);
-        
-    }
     
-    private String getMenuOption() {
-       Scanner keyboard = new Scanner(System.in); // get from keyboard
-       String value ="";// returned name
-       boolean valid = false;
-       
-       while(!valid){
-           System.out.println("\nENTER COMMAND HERE:");
-           
-           value = keyboard.nextLine();
-           value = value.trim();
-           
-           if(value.length()<1){
-               System.out.println("\nInvalid value: value can not be blank");
-               continue;
-           }
-       
-           break; // end loop
-       }
-       return value;
-    }
-
+@Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         

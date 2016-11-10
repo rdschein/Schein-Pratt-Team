@@ -10,12 +10,12 @@ import dungeonhero.view.MainMenuView;
 import dungeonhero.view.InventoryView;
 
  // @author Dylan
-class GameMenuView {
+public class GameMenuView extends View {
     
     private String menu;
     
     public GameMenuView(){   
-    this.menu = "\n"
+            super("\n"
                   + "\n---------------------------------"
                   + "\n  Game Menu                      "
                   + "\n---------------------------------"
@@ -24,49 +24,10 @@ class GameMenuView {
                   + "\nA-Type Action                    "
                   + "\nH-Help                           "
                   + "\nQ-Exit to Main Menu"
-                  + "\n---------------------------------";
+                  + "\n---------------------------------");
  }
-
-    void displayMenu() {
-       System.out.println(menu);
-        
-        boolean done = false;
-        do{
-            //prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")){
-                //MainMenuView MainMenu = new MainMenuView();
-                //MainMenu.displayMainMenuView();
-                return; // exit game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-        }while(!done);
-               
-    }
-
-    private String getMenuOption() {
-       Scanner keyboard = new Scanner(System.in); // get from keyboard
-       String value ="";// returned name
-       boolean valid = false;
-       
-       while(!valid){
-           System.out.println("\nENTER COMMAND HERE:");
-           
-           value = keyboard.nextLine();
-           value = value.trim();
-           
-           if(value.length()<1){
-               System.out.println("\nInvalid value: value can not be blank");
-               continue;
-           }
-       
-           break; // end loop
-       }
-       return value;
-    }
-
-    private boolean doAction(String choice) {
+@Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch(choice){
@@ -79,7 +40,7 @@ class GameMenuView {
                 break;
             case "A":
                 ActionInputView action = new ActionInputView();
-                action.displayActionInputView();
+                action.display();
                 break;
             case "H":
                 System.out.println("Help Menu called here");

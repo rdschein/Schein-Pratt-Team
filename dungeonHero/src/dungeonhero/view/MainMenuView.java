@@ -13,12 +13,10 @@ import java.util.Scanner;
  *
  * @author Dylan
  */
-public class MainMenuView {
+public class MainMenuView extends View {
 
-    private String menu;
-    
- public MainMenuView(){   
-    this.menu = "\n"
+    public MainMenuView(){
+    super("\n"
                   + "\n---------------------------------"
                   + "\n  Main Menu                      "
                   + "\n---------------------------------"
@@ -26,47 +24,10 @@ public class MainMenuView {
                   + "\nL-Load an existing game"
                   + "\nE-Exit"
                   + "\nH-Help"
-                  + "\n---------------------------------";
- }
-    
-    void displayMainMenuView() {
-        
-        System.out.println(menu);
-        
-        boolean done = false;
-        do{
-            //prompt for and get players name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("E")){
-                System.out.println(menu);
-                return; // exit game
-            }
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-        }while(!done);
-    }
+                  + "\n---------------------------------");
+}
 
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); // get from keyboard
-       String value ="";// returned name
-       boolean valid = false;
-       
-       while(!valid){
-           System.out.println("\nENTER COMMAND HERE:");
-           
-           value = keyboard.nextLine();
-           value = value.trim();
-           
-           if(value.length()<1){
-               System.out.println("\nInvalid value: value can not be blank");
-               continue;
-           }
-       
-           break; // end loop
-       }
-       return value;
-    }
-
+@Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase(); // convert choice to upper case
         
@@ -93,7 +54,7 @@ public class MainMenuView {
         
         // display the game
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
 
     private void startExisitingGame() {
@@ -102,6 +63,6 @@ public class MainMenuView {
 
     private void displayHelpMenu() {
        HelpMenuView helpMenu = new HelpMenuView();
-       helpMenu.displayHelpMenu();
+       helpMenu.display();
     }
 }
