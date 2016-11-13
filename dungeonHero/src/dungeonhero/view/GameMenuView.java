@@ -8,11 +8,12 @@ package dungeonhero.view;
 import java.util.Scanner;
 import dungeonhero.view.MainMenuView;
 import dungeonhero.view.InventoryView;
+import dungeonhero.view.TheBossBattle;
 
  // @author Dylan
 public class GameMenuView extends View {
     
-    private String menu;
+    //private String menu;
     
     public GameMenuView(){   
             super("\n"
@@ -45,6 +46,9 @@ public class GameMenuView extends View {
             case "H":
                 System.out.println("Help Menu called here");
                 break;
+            case "B":
+                TheBossBattle boss = new TheBossBattle();     // this is just a cheat that I can use to test the BossBattle dislay
+                boss.display();
                 
             default:
                 System.out.println("Invaild selection Try again");
