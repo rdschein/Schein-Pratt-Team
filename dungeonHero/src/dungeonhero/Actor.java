@@ -6,6 +6,7 @@
 package dungeonhero;
 
 import java.io.Serializable;
+import java.awt.Point;
 
 /**
  *
@@ -23,6 +24,15 @@ public enum Actor implements Serializable {
     
     Actor(String description, int row, int column) {
         this.description = description;
-        this.coordinates = New Point(row, column);
+        this.coordinates = new Point(row, column);
     }
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    public Point getCoordinates() {
+        return coordinates;
+    }
+
 }
