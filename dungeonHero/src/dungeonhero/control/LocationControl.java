@@ -4,12 +4,31 @@
  * and open the template in the editor.
  */
 package dungeonhero.control;
+
+import dungeonhero.Map;
+
 /**
  *
  * @author Rob
  */
 public class LocationControl {
     
+    private static Map createMap() {
+        // create the map
+        Map map = new Map (5 , 10);
+        
+        //creat the scenes for the game
+        Scene[] scenes = createScenes();
+        
+        //assign scenes to locations
+        GameControl.assignScenesToLocations(map,scenes);
+        
+        return map;
+    }
+
+    static void moveActorsToStartingLocation(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public int getRandomRow(int row) {
         // Rob wrote this function
         
