@@ -5,6 +5,8 @@
  */
 package dungeonhero.view;
 
+import dungeonhero.DungeonHero;
+import dungeonhero.control.GameControl;
 import java.util.Scanner;
 import dungeonhero.view.MainMenuView;
 import dungeonhero.view.InventoryView;
@@ -58,4 +60,11 @@ public class GameMenuView extends View {
         return false;
     }
     
+    private void startNewGame() {
+        GameControl.createNewGame(DungeonHero.getPlayer());
+        
+        // display the game
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    }
 }
