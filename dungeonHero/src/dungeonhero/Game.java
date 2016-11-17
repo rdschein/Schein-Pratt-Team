@@ -5,10 +5,47 @@
  */
 package dungeonhero;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Dylan
  */
-class Game {
+public class Game implements Serializable {
+    private Items[] inventory;
+    private Enemies[] enemies;
+    private Player player;
+    private Map map;
     
+    public Items[] getInventory() {
+        return inventory;
+    }
+    
+    public void setInventory(Items[] inventory) {
+        this.inventory = inventory;
+    }
+    
+    public Enemies[] getEnemies() {
+        return enemies;
+    }
+    
+    public void setEnemies(Enemies[] enemies) {
+        this.enemies = enemies;
+    }
+    
+    public Player getPlayer() {
+        return player;
+    }
+    
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
+    public Map getMap() {
+        return map;
+    }
+    
+    public void setMap(Map map) {
+        this.map = map;
+    }
 }

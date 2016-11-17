@@ -15,12 +15,34 @@ public class Scene implements Serializable{
     
     private String sceneType;
     private String sceneName;
-    private String blockedLocation;
+    private boolean blockedLocation;
     private String description;
 
     public Scene() {
     }
+    
+    private static Scene[] createScenes()
+    {
+    Scene[] scenes = new Scene[SceneType.values().length];
+    
+    Scene startingScene = new Scene();
+    startingScene.setDescription(
+            "Hello this is the start"
+          + "look here");// what should be in the scene
+    //startingScene.setMapSymbol("ST");
+    startingScene.setBlockedLocation(false);
+    scenes[SceneType.start.ordinal()] = startingScene;
+    
+    return scenes;
+    }
 
+    public enum SceneType{
+    
+        start,
+        boss,
+        finish,
+    
+    }
     
     
     public String getSceneType() {
@@ -39,11 +61,11 @@ public class Scene implements Serializable{
         this.sceneName = sceneName;
     }
 
-    public String getBlockedLocation() {
+    public boolean getBlockedLocation() {
         return blockedLocation;
     }
 
-    public void setBlockedLocation(String blockedLocation) {
+    public void setBlockedLocation(boolean blockedLocation) {
         this.blockedLocation = blockedLocation;
     }
 

@@ -7,71 +7,37 @@ package dungeonhero;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.awt.Point;
 /**
  *
  * @author Dylan
  */
-public class Enemies implements Serializable {
+public enum Enemies implements Serializable {
+ 
+    Goblin("Evil underling of the dungeon.", 1, 1),
+    Ghost("Evil spirit that haunts the dungeon.", 1, 4),
+    Knight("Noble soldier who guards the dungeon.", 2, 2),
+    Undead("Skeleton that haunts the dungeon.", 4, 3);
     
-    private String type;
-    private String attributes;
-
-    public Enemies() {
-    }
+    private final String description;
+    private final Point coordinates;
     
-    
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getAttributes() {
-        return attributes;
-    }
-
-    public void setAttributes(String attributes) {
-        this.attributes = attributes;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 97 * hash + Objects.hashCode(this.type);
-        hash = 97 * hash + Objects.hashCode(this.attributes);
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "Enemies{" + "type=" + type + ", attributes=" + attributes + '}';
+    Enemies(String description, int row, int column) {
+        this.description = description;
+        this.coordinates = new Point(row, column);
     }
     
-    
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Enemies other = (Enemies) obj;
-        if (!Objects.equals(this.type, other.type)) {
-            return false;
-        }
-        if (!Objects.equals(this.attributes, other.attributes)) {
-            return false;
-        }
-        return true;
+    public String getDescription() {
+        return description;
     }
+    
+    public Point getCoordinates() {
+        return coordinates;
+    }
+
+   
+
+    
     
     
     
