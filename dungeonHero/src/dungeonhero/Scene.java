@@ -17,6 +17,7 @@ public class Scene implements Serializable{
     private String sceneName;
     private boolean blockedLocation;
     private String description;
+    
 
     public Scene() {
     }
@@ -29,7 +30,7 @@ public class Scene implements Serializable{
     startingScene.setDescription(
             "Hello this is the start"
           + "look here");// what should be in the scene
-    //startingScene.setMapSymbol("ST");
+    startingScene.setMapSymbol("ST");
     startingScene.setBlockedLocation(false);
     scenes[SceneType.start.ordinal()] = startingScene;
     
