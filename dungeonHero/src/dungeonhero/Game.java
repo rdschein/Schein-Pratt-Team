@@ -15,7 +15,7 @@ public class Game implements Serializable {
     private Items[] inventory;
     private Enemies[] enemies;
     private Player player;
-    private Map map;
+    public Map map;
     
     public Items[] getInventory() {
         return inventory;

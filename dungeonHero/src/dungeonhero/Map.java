@@ -97,6 +97,10 @@ public class Map implements Serializable {
         }
         return true;
     }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
     
     
     

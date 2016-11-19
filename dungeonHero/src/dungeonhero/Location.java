@@ -6,6 +6,7 @@
 package dungeonhero;
 
 
+import dungeonhero.Scene.SceneType;
 import java.io.Serializable;
 import java.util.Objects;
 /**
@@ -17,7 +18,7 @@ public class Location implements Serializable {
     private int row;
     private int column;
     private boolean visited;
-    private Scene scene;
+    public Scene scene;
 
     public Location() {
     }
@@ -81,6 +82,10 @@ public class Location implements Serializable {
             return false;
         }
         return true;
+    }
+
+    public void setScene(Scene scenex) {
+       scene = scenex;
     }
     
     

@@ -6,6 +6,10 @@
 package dungeonhero.view;
 
 import dungeonhero.DungeonHero;
+import dungeonhero.Game;
+import dungeonhero.Items;
+import dungeonhero.Location;
+import dungeonhero.Map;
 import dungeonhero.control.GameControl;
 import java.util.Scanner;
 import dungeonhero.view.MainMenuView;
@@ -35,11 +39,12 @@ public class GameMenuView extends View {
         
         switch(choice){
             case "M": // creat new game
-                System.out.println("The Map will now be displayed");
+                this.displayMap();
                 break;
             case "I":
-                InventoryView inventory = new InventoryView();
-                inventory.display();
+                //InventoryView inventory = new InventoryView();
+                //inventory.display();
+                this.viewInventory();
                 break;
             case "A":
                 ActionInputView action = new ActionInputView();
@@ -67,4 +72,81 @@ public class GameMenuView extends View {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
+
+    private void viewInventory() {
+        StringBuilder line;
+        
+        Game game = DungeonHero.getCurrentGame();
+        Items[] inventory = game.getInventory();
+        
+        System.out.println("\n    List of Inventory Items");
+        line = new StringBuilder();
+        
+        System.out.println(line.toString());
+        
+        for (Items item : inventory)
+        {
+            line = new StringBuilder(
+            line.insert(0, item.getInventoryType()));
+            
+            System.out.println(line.toString());
+            
+            line.setLength(0);
+        
+        }
+        
+        
+       // Items key = new Items();
+       // key.setInventoryType("Key");
+       // key.setQuantity(0);
+       // key.setAmountRequired(1);
+     //   inventory[Item.key.ordinal()] = key;
+    }
+
+    private void displayMap() {
+       Game game = DungeonHero.getCurrentGame();
+       Map map = game.getMap();
+       Location[][] locations = map.getLocations();
+       
+       System.out.println("                       Dungeon Map");
+       System.out.println("    1     2     3     4     5     6     7     8     9    10");
+       
+       int rows = 1;
+       
+       for (Location[] numOfRow : locations)
+       {
+           System.out.println("-------------------------------------------------------------");
+           System.out.print(rows);
+           rows++;
+           
+           for(Location numOfCol : numOfRow)
+           {
+               //int row = map.getNumOfRows();
+               //int col = map.getNumOfCol();
+               
+               System.out.print("|");
+               //Location location = locations [row][col];
+               
+              // boolean visited = location.isVisited();
+               
+               
+               //if (visited == true)
+               //{
+               //    System.out.print(location.scene.getMapSymbol());
+               //}
+               //else
+               //{
+                   System.out.print(" ?? ");
+               //}
+               
+               System.out.print("|");
+           }
+           System.out.println();
+       }
+       System.out.println("-------------------------------------------------------------");
+   }
 }
+       
+       
+    
+

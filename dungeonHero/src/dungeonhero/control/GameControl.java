@@ -9,8 +9,10 @@ import dungeonhero.DungeonHero;
 import dungeonhero.Enemies;
 import dungeonhero.Game;
 import dungeonhero.Items;
+import dungeonhero.Location;
 import dungeonhero.Map;
 import dungeonhero.Player;
+import dungeonhero.Scene;
 //import dungeonhero.control.LocationControl;
 
 /**
@@ -98,6 +100,66 @@ public class GameControl {
         inventory[Item.key.ordinal()] = key;
         
         return inventory;
+    }
+
+    static void assignScenesToLocations(Map map, Scene[] scenes) {
+        Location[][] locations = map.getLocations();
+        
+        //row a
+        locations[0][0].setScene(scenes[Scene.SceneType.A1.ordinal()]);
+        locations[0][1].setScene(scenes[Scene.SceneType.A2.ordinal()]);
+        locations[0][2].setScene(scenes[Scene.SceneType.A3.ordinal()]);
+        locations[0][3].setScene(scenes[Scene.SceneType.A4.ordinal()]);
+        locations[0][4].setScene(scenes[Scene.SceneType.A5.ordinal()]);
+        locations[0][5].setScene(scenes[Scene.SceneType.A6.ordinal()]);
+        locations[0][6].setScene(scenes[Scene.SceneType.A7.ordinal()]);
+        locations[0][7].setScene(scenes[Scene.SceneType.A8.ordinal()]);
+        locations[0][8].setScene(scenes[Scene.SceneType.A9.ordinal()]);
+        locations[0][9].setScene(scenes[Scene.SceneType.A10.ordinal()]);
+        
+        locations[1][0].setScene(scenes[Scene.SceneType.B1.ordinal()]);
+        locations[1][1].setScene(scenes[Scene.SceneType.B2.ordinal()]);
+        locations[1][2].setScene(scenes[Scene.SceneType.B3.ordinal()]);
+        locations[1][3].setScene(scenes[Scene.SceneType.B4.ordinal()]);
+        locations[1][4].setScene(scenes[Scene.SceneType.B5.ordinal()]);
+        locations[1][5].setScene(scenes[Scene.SceneType.B6.ordinal()]);
+        locations[1][6].setScene(scenes[Scene.SceneType.B7.ordinal()]);
+        locations[1][7].setScene(scenes[Scene.SceneType.B8.ordinal()]);
+        locations[1][8].setScene(scenes[Scene.SceneType.B9.ordinal()]);
+        locations[1][9].setScene(scenes[Scene.SceneType.B10.ordinal()]);
+        
+        locations[2][0].setScene(scenes[Scene.SceneType.C1.ordinal()]);
+        locations[2][1].setScene(scenes[Scene.SceneType.C2.ordinal()]);
+        locations[2][2].setScene(scenes[Scene.SceneType.C3.ordinal()]);
+        locations[2][3].setScene(scenes[Scene.SceneType.C4.ordinal()]);
+        locations[2][4].setScene(scenes[Scene.SceneType.C5.ordinal()]);
+        locations[2][5].setScene(scenes[Scene.SceneType.C6.ordinal()]);
+        locations[2][6].setScene(scenes[Scene.SceneType.C7.ordinal()]);
+        locations[2][7].setScene(scenes[Scene.SceneType.C8.ordinal()]);
+        locations[2][8].setScene(scenes[Scene.SceneType.C9.ordinal()]);
+        locations[2][9].setScene(scenes[Scene.SceneType.C10.ordinal()]);
+    
+        locations[3][0].setScene(scenes[Scene.SceneType.D1.ordinal()]);
+        locations[3][1].setScene(scenes[Scene.SceneType.D2.ordinal()]);
+        locations[3][2].setScene(scenes[Scene.SceneType.D3.ordinal()]);
+        locations[3][3].setScene(scenes[Scene.SceneType.D4.ordinal()]);
+        locations[3][4].setScene(scenes[Scene.SceneType.D5.ordinal()]);
+        locations[3][5].setScene(scenes[Scene.SceneType.D6.ordinal()]);
+        locations[3][6].setScene(scenes[Scene.SceneType.D7.ordinal()]);
+        locations[3][7].setScene(scenes[Scene.SceneType.D8.ordinal()]);
+        locations[3][8].setScene(scenes[Scene.SceneType.D9.ordinal()]);
+        locations[3][9].setScene(scenes[Scene.SceneType.D10.ordinal()]);
+
+        locations[4][0].setScene(scenes[Scene.SceneType.E1.ordinal()]);
+        locations[4][1].setScene(scenes[Scene.SceneType.E2.ordinal()]);
+        locations[4][2].setScene(scenes[Scene.SceneType.E3.ordinal()]);
+        locations[4][3].setScene(scenes[Scene.SceneType.E4.ordinal()]);
+        locations[4][4].setScene(scenes[Scene.SceneType.E5.ordinal()]);
+        locations[4][5].setScene(scenes[Scene.SceneType.E6.ordinal()]);
+        locations[4][6].setScene(scenes[Scene.SceneType.E7.ordinal()]);
+        locations[4][7].setScene(scenes[Scene.SceneType.E8.ordinal()]);
+        locations[4][8].setScene(scenes[Scene.SceneType.E9.ordinal()]);
+        locations[4][9].setScene(scenes[Scene.SceneType.E10.ordinal()]);
     }
     
     public enum Item

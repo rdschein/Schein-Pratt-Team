@@ -6,6 +6,8 @@
 package dungeonhero.control;
 
 import dungeonhero.Map;
+import dungeonhero.Scene;
+import static dungeonhero.Scene.createScenes;
 
 /**
  *
@@ -13,11 +15,11 @@ import dungeonhero.Map;
  */
 public class LocationControl {
     
-    private static Map createMap() {
+    static Map createMap() {
         // create the map
         Map map = new Map (5 , 10);
         
-        //creat the scenes for the game
+        //creat the scenes for the game createScenes()
         Scene[] scenes = createScenes();
         
         //assign scenes to locations
@@ -27,7 +29,7 @@ public class LocationControl {
     }
 
     static void moveActorsToStartingLocation(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("moveActorToStartinLocation was called and does nothing");
     }
     public int getRandomRow(int row) {
         // Rob wrote this function
