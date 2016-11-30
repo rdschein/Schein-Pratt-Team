@@ -17,6 +17,7 @@ public class Items implements Serializable {
     private String inventoryType;
     private double quantity;
     private double amountRequired;
+    private int damage;
 
     public Items() {
     }
@@ -86,6 +87,15 @@ public class Items implements Serializable {
         }
         return true;
     }
+
+    public void setDamage(int damge) {
+        this.damage = damge; //To change body of generated methods, choose Tools | Templates.
+    }
     
+    public void getAverageDamage()
+    {
+    
+    
+    }
     
 }
