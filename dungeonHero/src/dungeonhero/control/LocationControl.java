@@ -8,6 +8,7 @@ package dungeonhero.control;
 import dungeonhero.Map;
 import dungeonhero.Scene;
 import static dungeonhero.Scene.createScenes;
+import dungeonhero.exceptions.LocationControlException;
 
 /**
  *
@@ -31,7 +32,7 @@ public class LocationControl {
     static void moveActorsToStartingLocation(Map map) {
         System.out.println("moveActorToStartinLocation was called and does nothing");
     }
-    public int getRandomRow(int row) {
+    public int getRandomRow(int row) throws LocationControlException {
         // Rob wrote this function
         
         row = row + 3;
@@ -41,6 +42,11 @@ public class LocationControl {
         }
         while (row < 1) {
             row = row + 4;
+        }
+        
+        if(row > 5 || row < 1) // error catching
+        {
+            throw new LocationControlException("Error: The row is greater than 5 or less than one"); // team assignment 10 needs to be finsihed
         }
        
         return row;

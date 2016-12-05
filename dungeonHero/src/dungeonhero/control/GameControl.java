@@ -13,6 +13,7 @@ import dungeonhero.Location;
 import dungeonhero.Map;
 import dungeonhero.Player;
 import dungeonhero.Scene;
+import java.util.ArrayList;
 //import dungeonhero.control.LocationControl;
 
 /**
@@ -61,42 +62,49 @@ public class GameControl {
         sword.setInventoryType("Sword");
         sword.setQuantity(0);
         sword.setAmountRequired(0);
+        sword.setDamage(3);
         inventory[Item.sword.ordinal()] = sword;
         
         Items bow = new Items();
         bow.setInventoryType("Bow");
         bow.setQuantity(0);
         bow.setAmountRequired(0);
+        bow.setDamage(2);
         inventory[Item.bow.ordinal()] = bow;
         
         Items bomb = new Items();
         bomb.setInventoryType("Bomb");
         bomb.setQuantity(0);
         bomb.setAmountRequired(0);
+        bomb.setDamage(1);
         inventory[Item.bomb.ordinal()] = bomb;
         
         Items grapple = new Items();
         grapple.setInventoryType("Grapple");
         grapple.setQuantity(0);
         grapple.setAmountRequired(0);
+        grapple.setDamage(0);
         inventory[Item.grapple.ordinal()] = grapple;
         
         Items harp = new Items();
         harp.setInventoryType("Harp");
         harp.setQuantity(0);
         harp.setAmountRequired(0);
+        harp.setDamage(0);
         inventory[Item.harp.ordinal()] = harp;
         
         Items enchantedSword = new Items();
         enchantedSword.setInventoryType("Enchanted Sword");
         enchantedSword.setQuantity(0);
         enchantedSword.setAmountRequired(0);
+        enchantedSword.setDamage(5);
         inventory[Item.enchantedSword.ordinal()] = enchantedSword;
         
         Items key = new Items();
         key.setInventoryType("Key");
         key.setQuantity(0);
         key.setAmountRequired(1);
+        key.setDamage(0);
         inventory[Item.key.ordinal()] = key;
         
         return inventory;
@@ -161,6 +169,12 @@ public class GameControl {
         locations[4][8].setScene(scenes[Scene.SceneType.E9.ordinal()]);
         locations[4][9].setScene(scenes[Scene.SceneType.E10.ordinal()]);
     }
+
+    private static class health {
+
+        public health() {
+        }
+    }
     
     public enum Item
     {
@@ -173,6 +187,8 @@ public class GameControl {
         key   
         
     }
+    
+    
 
     public static Enemies[] createEnemyList() {
         System.out.println("createEnemyList() in GameControl called.");

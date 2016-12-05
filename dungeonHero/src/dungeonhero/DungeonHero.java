@@ -36,8 +36,13 @@ public class DungeonHero {
     public static void main(String[] args) {
         
         StartProgramView startProgramView= new StartProgramView();
+        try{
         startProgramView.displayStartProgramView();
-        
+        } catch(Throwable te){
+            System.out.println(te.getMessage()); //Team assignment 10
+            te.printStackTrace();
+            startProgramView.display();
+        }
         
         
     }

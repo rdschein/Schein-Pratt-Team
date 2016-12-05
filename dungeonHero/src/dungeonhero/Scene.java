@@ -21,7 +21,6 @@ public class Scene implements Serializable{
 
     public Scene() {
     }
-    
     public static Scene[] createScenes()
     {
     Scene[] scenes = new Scene[SceneType.values().length];
