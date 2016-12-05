@@ -6,6 +6,7 @@
 package dungeonhero.control;
 
 import dungeonhero.Map;
+import dungeonhero.Player;
 import dungeonhero.Scene;
 import static dungeonhero.Scene.createScenes;
 import dungeonhero.exceptions.LocationControlException;
@@ -29,8 +30,12 @@ public class LocationControl {
         return map;
     }
 
-    static void moveActorsToStartingLocation(Map map) {
-        System.out.println("moveActorToStartinLocation was called and does nothing");
+    static void moveActorsToStartingLocation(Map map, Player player) {
+        player.setPlayerRow(5);
+        player.setPlayerCol(5);
+        
+        
+        
     }
     public int getRandomRow(int row) throws LocationControlException {
         // Rob wrote this function

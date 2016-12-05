@@ -113,31 +113,31 @@ public class GameMenuView extends View {
        
        int rows = 1;
        
-       for (Location[] numOfRow : locations)
+       for (Location[] nextOfRow : locations)
        {
            System.out.println("-------------------------------------------------------------");
            System.out.print(rows);
            rows++;
            
-           for(Location numOfCol : numOfRow)
+           for(Location nextLoc : nextOfRow)
            {
-               //int row = map.getNumOfRows();
-               //int col = map.getNumOfCol();
+               int row = nextLoc.getRow();
+               int col = nextLoc.getColumn();
                
                System.out.print("|");
-               //Location location = locations [row][col];
+               Location location = locations [row][col];
                
-              // boolean visited = location.isVisited();
+               boolean visited = location.isVisited();
                
                
-               //if (visited == true)
-               //{
-               //    System.out.print(location.scene.getMapSymbol());
-               //}
-               //else
-               //{
+               if (visited == true)
+               {
+                   System.out.print(location.scene.getMapSymbol());
+               }
+               else
+               {
                    System.out.print(" ?? ");
-               //}
+               }
                
                System.out.print("|");
            }

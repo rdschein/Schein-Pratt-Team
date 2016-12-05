@@ -17,8 +17,28 @@ public class Player implements Serializable {
     
     private String name;
     private int gameOverCount;
+    private int playerRow;
+    private int playerCol;
+
+    public int getPlayerRow() {
+        return playerRow;
+    }
+
+    public void setPlayerRow(int playerRow) {
+        this.playerRow = playerRow;
+    }
+
+    public int getPlayerCol() {
+        return playerCol;
+    }
+
+    public void setPlayerCol(int playerCol) {
+        this.playerCol = playerCol;
+    }
 
     public Player() {
+        playerRow = 5;
+        playerCol = 5;
     }
     
     
