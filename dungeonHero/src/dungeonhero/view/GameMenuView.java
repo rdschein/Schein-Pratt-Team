@@ -45,13 +45,23 @@ public class GameMenuView extends View {
                 //InventoryView inventory = new InventoryView();
                 //inventory.display();
                 this.viewInventory();
+                System.out.println("---------------------------------\n" +
+                    "  Game Menu                      \n" +
+                    "---------------------------------\n" +
+                    "M- View Map                      \n" +
+                    "I-Inventory                      \n" +
+                    "A-Type Action                    \n" +
+                    "H-Help                           \n" +
+                    "Q-Exit to Main Menu\n" +
+                    "---------------------------------");
                 break;
             case "A":
                 ActionInputView action = new ActionInputView();
                 action.display();
                 break;
             case "H":
-                System.out.println("Help Menu called here");
+                HelpMenuView help = new HelpMenuView();
+                help.display();
                 break;
             case "B":
                 TheBossBattle boss = new TheBossBattle();     // this is just a cheat that I can use to test the BossBattle dislay
@@ -144,6 +154,15 @@ public class GameMenuView extends View {
            System.out.println();
        }
        System.out.println("-------------------------------------------------------------");
+       System.out.println("---------------------------------\n" +
+            "  Game Menu                      \n" +
+            "---------------------------------\n" +
+            "M- View Map                      \n" +
+            "I-Inventory                      \n" +
+            "A-Type Action                    \n" +
+            "H-Help                           \n" +
+            "Q-Exit to Main Menu\n" +
+            "---------------------------------");
    }
 }
        

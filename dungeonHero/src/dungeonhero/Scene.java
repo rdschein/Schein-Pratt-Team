@@ -397,8 +397,11 @@ public class Scene implements Serializable{
     
     Scene e5Scene = new Scene();
     e5Scene.setDescription(
-            "e5 Scene"
-          + "Needs update");// what should be in the scene
+           "You enter the Dungeon. Once inside the whispering stops and is repla"
+                   + "ced with a eerie silence. The Entrance Hall is large and f"
+                   + "illed with grotesque statues of monsters battling men. As "
+                   + "you walk around the frozen battlefield you notice a door t"
+                   + "o the north as well as a door to the west.");// what should be in the scene
     e5Scene.setMapSymbol("e5");
     e5Scene.setBlockedLocation(false);
     scenes[SceneType.E5.ordinal()] = e5Scene;
@@ -437,7 +440,7 @@ public class Scene implements Serializable{
     
     Scene e10Scene = new Scene();
     e10Scene.setDescription(
-            "A10 Scene"
+            "e10 Scene"
           + "Needs update");// what should be in the scene
     e10Scene.setMapSymbol("e0");
     e10Scene.setBlockedLocation(false);
