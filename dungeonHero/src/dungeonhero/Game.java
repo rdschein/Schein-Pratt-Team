@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Game implements Serializable {
     private Items[] inventory;
     private Enemies[] enemies;
-    private Player player;
+    public Player player;
     public Map map;
     
     public Items[] getInventory() {

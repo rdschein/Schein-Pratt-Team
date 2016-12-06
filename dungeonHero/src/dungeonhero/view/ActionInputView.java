@@ -5,17 +5,35 @@
  */
 package dungeonhero.view;
 import java.util.Scanner;
-
+import dungeonhero.Game;
+import dungeonhero.Map;
+import dungeonhero.Player;
 /**
  *
  * @author Dylan Pratt
  */
 public class ActionInputView extends View {
+    
+    public ActionInputView(){   
+            super("Press q to cancel and return to game menu");
+ }
 
     
 @Override
     public boolean doAction(String choice) {
                 switch(choice){
+            case "go north":
+               
+                break;
+            case "go south":
+                System.out.println("go north was called");
+                break;
+            case "go west":
+                System.out.println("go north was called");
+                break;
+            case "go east":
+                System.out.println("go north was called");
+                break;
             case "attack": // creat new game
                 System.out.println("attack funtion is called");
                 getAttackOption();

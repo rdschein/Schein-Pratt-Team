@@ -39,6 +39,36 @@ public class LocationControl {
         
         
     }
+    static void movePlayerNorth(Map map, Player player)
+    {
+       player.setPlayerRow(player.getPlayerRow()+1);
+        
+       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
+    
+    }
+    static void movePlayerWest(Map map, Player player)
+    {
+        player.setPlayerRow(player.getPlayerCol()-1);
+        
+        map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
+    
+    }
+    static void movePlayerEasth(Map map, Player player)
+    {
+       player.setPlayerRow(player.getPlayerCol()+1);
+        
+       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
+    
+    }
+    static void movePlayerSouth(Map map, Player player)
+    {
+       player.setPlayerRow(player.getPlayerRow()-1);
+        
+       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
+    
+    }
+    
+    
     public int getRandomRow(int row) throws LocationControlException {
         // Rob wrote this function
         
