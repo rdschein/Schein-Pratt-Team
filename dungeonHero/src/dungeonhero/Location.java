@@ -48,6 +48,7 @@ public class Location implements Serializable {
     public void setVisited(boolean visited) {
         this.visited = visited;
     }
+    
 
     @Override
     public int hashCode() {

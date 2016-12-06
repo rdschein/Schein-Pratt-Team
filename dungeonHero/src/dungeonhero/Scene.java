@@ -18,6 +18,42 @@ public class Scene implements Serializable{
     private boolean blockedLocation;
     private String description;
     private String mapSymbol;
+    private boolean canGoNorth;
+    private boolean canGoWest;
+    private boolean canGoEast;
+
+    public boolean isCanGoNorth() {
+        return canGoNorth;
+    }
+
+    public void setCanGoNorth(boolean canGoNorth) {
+        this.canGoNorth = canGoNorth;
+    }
+
+    public boolean isCanGoWest() {
+        return canGoWest;
+    }
+
+    public void setCanGoWest(boolean canGoWest) {
+        this.canGoWest = canGoWest;
+    }
+
+    public boolean isCanGoEast() {
+        return canGoEast;
+    }
+
+    public void setCanGoEast(boolean canGoEast) {
+        this.canGoEast = canGoEast;
+    }
+
+    public boolean isCanGoSouth() {
+        return canGoSouth;
+    }
+
+    public void setCanGoSouth(boolean canGoSouth) {
+        this.canGoSouth = canGoSouth;
+    }
+    private boolean canGoSouth;
 
     public Scene() {
     }
@@ -46,354 +82,530 @@ public class Scene implements Serializable{
     Scene a1Scene = new Scene();
     a1Scene.setDescription(
             "A1 Scene"
-          + "Needs update");// what should be in the scene
-    a1Scene.setMapSymbol("A1");
+          + "Needs update Boss room");// what should be in the scene
+    a1Scene.setMapSymbol(" A1 ");
     a1Scene.setBlockedLocation(false);
     scenes[SceneType.A1.ordinal()] = a1Scene;
+    a1Scene.setCanGoNorth(false);
+    a1Scene.setCanGoWest(false);
+    a1Scene.setCanGoEast(false);
+    a1Scene.setCanGoSouth(false);
     
     Scene a2Scene = new Scene();
     a2Scene.setDescription(
             "A2 Scene"
           + "Needs update");// what should be in the scene
-    a2Scene.setMapSymbol("A2");
+    a2Scene.setMapSymbol(" A2 ");
     a2Scene.setBlockedLocation(false);
     scenes[SceneType.A2.ordinal()] = a2Scene;
+    a2Scene.setCanGoNorth(false);
+    a2Scene.setCanGoWest(false);
+    a2Scene.setCanGoEast(true);
+    a2Scene.setCanGoSouth(true);
     
     Scene a3Scene = new Scene();
     a3Scene.setDescription(
             "A3 Scene"
           + "Needs update");// what should be in the scene
-    a3Scene.setMapSymbol("A3");
+    a3Scene.setMapSymbol(" A3 ");
     a3Scene.setBlockedLocation(false);
     scenes[SceneType.A3.ordinal()] = a3Scene;
+    a3Scene.setCanGoNorth(false);
+    a3Scene.setCanGoWest(true);
+    a3Scene.setCanGoEast(true);
+    a3Scene.setCanGoSouth(true);
     
     Scene a4Scene = new Scene();
     a4Scene.setDescription(
             "A4 Scene"
           + "Needs update");// what should be in the scene
-    a4Scene.setMapSymbol("A4");
+    a4Scene.setMapSymbol(" A4 ");
     a4Scene.setBlockedLocation(false);
     scenes[SceneType.A4.ordinal()] = a4Scene;
+    a4Scene.setCanGoNorth(false);
+    a4Scene.setCanGoWest(true);
+    a4Scene.setCanGoEast(false);
+    a4Scene.setCanGoSouth(true);
     
     Scene a5Scene = new Scene();
     a5Scene.setDescription(
             "A5 Scene"
           + "Needs update");// what should be in the scene
-    a5Scene.setMapSymbol("A5");
+    a5Scene.setMapSymbol(" A5 ");
     a5Scene.setBlockedLocation(false);
     scenes[SceneType.A5.ordinal()] = a5Scene;
+    a5Scene.setCanGoNorth(false);
+    a5Scene.setCanGoWest(false);
+    a5Scene.setCanGoEast(false);
+    a5Scene.setCanGoSouth(true);
     
     Scene a6Scene = new Scene();
     a6Scene.setDescription(
             "A6 Scene"
           + "Needs update");// what should be in the scene
-    a6Scene.setMapSymbol("A6");
+    a6Scene.setMapSymbol(" A6 ");
     a6Scene.setBlockedLocation(false);
     scenes[SceneType.A6.ordinal()] = a6Scene;
+    a6Scene.setCanGoNorth(false);
+    a6Scene.setCanGoWest(false);
+    a6Scene.setCanGoEast(false);
+    a6Scene.setCanGoSouth(false);
     
     Scene a7Scene = new Scene();
     a7Scene.setDescription(
             "A7 Scene"
           + "Needs update");// what should be in the scene
-    a7Scene.setMapSymbol("A7");
+    a7Scene.setMapSymbol(" A7 ");
     a7Scene.setBlockedLocation(false);
     scenes[SceneType.A7.ordinal()] = a7Scene;
+    a7Scene.setCanGoNorth(false);
+    a7Scene.setCanGoWest(false);
+    a7Scene.setCanGoEast(true);
+    a7Scene.setCanGoSouth(false);
     
     Scene a8Scene = new Scene();
     a8Scene.setDescription(
             "A8 Scene"
           + "Needs update");// what should be in the scene
-    a8Scene.setMapSymbol("A8");
+    a8Scene.setMapSymbol(" A8 ");
     a8Scene.setBlockedLocation(false);
     scenes[SceneType.A8.ordinal()] = a8Scene;
+    a8Scene.setCanGoNorth(false);
+    a8Scene.setCanGoWest(false);
+    a8Scene.setCanGoEast(true);
+    a8Scene.setCanGoSouth(false);
     
     Scene a9Scene = new Scene();
     a9Scene.setDescription(
             "A9 Scene"
           + "Needs update");// what should be in the scene
-    a9Scene.setMapSymbol("A9");
+    a9Scene.setMapSymbol(" A9 ");
     a9Scene.setBlockedLocation(false);
     scenes[SceneType.A9.ordinal()] = a9Scene;
+    a9Scene.setCanGoNorth(false);
+    a9Scene.setCanGoWest(false);
+    a9Scene.setCanGoEast(true);
+    a9Scene.setCanGoSouth(false);
     
     Scene a10Scene = new Scene();
     a10Scene.setDescription(
             "A10 Scene"
           + "Needs update");// what should be in the scene
-    a10Scene.setMapSymbol("A0");
+    a10Scene.setMapSymbol(" A0 ");
     a10Scene.setBlockedLocation(false);
     scenes[SceneType.A10.ordinal()] = a10Scene;
+    a10Scene.setCanGoNorth(false);
+    a10Scene.setCanGoWest(false);
+    a10Scene.setCanGoEast(false);
+    a10Scene.setCanGoSouth(false);
     
     Scene b1Scene = new Scene();
     b1Scene.setDescription(
             "B1 Scene"
           + "Needs update");// what should be in the scene
-    b1Scene.setMapSymbol("b1");
+    b1Scene.setMapSymbol(" b1 ");
     b1Scene.setBlockedLocation(false);
     scenes[SceneType.B1.ordinal()] = b1Scene;
+    b1Scene.setCanGoNorth(true);
+    b1Scene.setCanGoWest(false);
+    b1Scene.setCanGoEast(true);
+    b1Scene.setCanGoSouth(true);
     
     Scene b2Scene = new Scene();
     b2Scene.setDescription(
             "b2 Scene"
           + "Needs update");// what should be in the scene
-    b2Scene.setMapSymbol("B2");
+    b2Scene.setMapSymbol(" B2 ");
     b2Scene.setBlockedLocation(false);
     scenes[SceneType.B2.ordinal()] = b2Scene;
+    b2Scene.setCanGoNorth(true);
+    b2Scene.setCanGoWest(true);
+    b2Scene.setCanGoEast(false);
+    b2Scene.setCanGoSouth(true);
     
     Scene b3Scene = new Scene();
     b3Scene.setDescription(
             "b3 Scene"
           + "Needs update");// what should be in the scene
-    b3Scene.setMapSymbol("B3");
+    b3Scene.setMapSymbol(" B3 ");
     b3Scene.setBlockedLocation(false);
     scenes[SceneType.B3.ordinal()] = b3Scene;
+    b3Scene.setCanGoNorth(true);
+    b3Scene.setCanGoWest(true);
+    b3Scene.setCanGoEast(true);
+    b3Scene.setCanGoSouth(true);
     
     Scene b4Scene = new Scene();
     b4Scene.setDescription(
             "b4 Scene"
           + "Needs update");// what should be in the scene
-    b4Scene.setMapSymbol("b4");
+    b4Scene.setMapSymbol(" b4 ");
     b4Scene.setBlockedLocation(false);
     scenes[SceneType.B4.ordinal()] = b4Scene;
+    b4Scene.setCanGoNorth(true);
+    b4Scene.setCanGoWest(true);
+    b4Scene.setCanGoEast(false);
+    b4Scene.setCanGoSouth(true);
     
     Scene b5Scene = new Scene();
     b5Scene.setDescription(
             "b5 Scene"
           + "Needs update");// what should be in the scene
-    b5Scene.setMapSymbol("B5");
+    b5Scene.setMapSymbol(" B5 ");
     b5Scene.setBlockedLocation(false);
     scenes[SceneType.B5.ordinal()] = b5Scene;
+    b5Scene.setCanGoNorth(true);
+    b5Scene.setCanGoWest(false);
+    b5Scene.setCanGoEast(true);
+    b5Scene.setCanGoSouth(true);
     
     Scene b6Scene = new Scene();
     b6Scene.setDescription(
             "B6 Scene"
           + "Needs update");// what should be in the scene
-    b6Scene.setMapSymbol("b6");
+    b6Scene.setMapSymbol(" b6 ");
     b6Scene.setBlockedLocation(false);
     scenes[SceneType.B6.ordinal()] = b6Scene;
+    b6Scene.setCanGoNorth(false);
+    b6Scene.setCanGoWest(true);
+    b6Scene.setCanGoEast(true);
+    b6Scene.setCanGoSouth(false);
     
     Scene b7Scene = new Scene();
     b7Scene.setDescription(
             "b7 Scene"
           + "Needs update");// what should be in the scene
-    b7Scene.setMapSymbol("B7");
+    b7Scene.setMapSymbol(" B7 ");
     b7Scene.setBlockedLocation(false);
     scenes[SceneType.B7.ordinal()] = b7Scene;
+    b7Scene.setCanGoNorth(false);
+    b7Scene.setCanGoWest(true);
+    b7Scene.setCanGoEast(true);
+    b7Scene.setCanGoSouth(true);
     
     Scene b8Scene = new Scene();
     b8Scene.setDescription(
             "b8 Scene"
           + "Needs update");// what should be in the scene
-    b8Scene.setMapSymbol("B8");
+    b8Scene.setMapSymbol(" B8 ");
     b8Scene.setBlockedLocation(false);
     scenes[SceneType.B8.ordinal()] = a8Scene;
+    b8Scene.setCanGoNorth(false);
+    b8Scene.setCanGoWest(true);
+    b8Scene.setCanGoEast(true);
+    b8Scene.setCanGoSouth(true);
     
     Scene b9Scene = new Scene();
     b9Scene.setDescription(
             "b9 Scene"
           + "Needs update");// what should be in the scene
-    b9Scene.setMapSymbol("b9");
+    b9Scene.setMapSymbol(" b9 ");
     b9Scene.setBlockedLocation(false);
     scenes[SceneType.B9.ordinal()] = b9Scene;
+    b9Scene.setCanGoNorth(false);
+    b9Scene.setCanGoWest(true);
+    b9Scene.setCanGoEast(false);
+    b9Scene.setCanGoSouth(true);
     
     Scene b10Scene = new Scene();
     b10Scene.setDescription(
             "b10 Scene"
           + "Needs update");// what should be in the scene
-    b10Scene.setMapSymbol("b0");
+    b10Scene.setMapSymbol(" b0 ");
     b10Scene.setBlockedLocation(false);
     scenes[SceneType.B10.ordinal()] = b10Scene;
+    b10Scene.setCanGoNorth(false);
+    b10Scene.setCanGoWest(false);
+    b10Scene.setCanGoEast(false);
+    b10Scene.setCanGoSouth(true);
     
     Scene c1Scene = new Scene();
     c1Scene.setDescription(
             "c1 Scene"
           + "Needs update");// what should be in the scene
-    c1Scene.setMapSymbol("c1");
+    c1Scene.setMapSymbol(" c1 ");
     c1Scene.setBlockedLocation(false);
     scenes[SceneType.C1.ordinal()] = c1Scene;
+    c1Scene.setCanGoNorth(true);
+    c1Scene.setCanGoWest(false);
+    c1Scene.setCanGoEast(true);
+    c1Scene.setCanGoSouth(false);
     
     Scene c2Scene = new Scene();
     c2Scene.setDescription(
             "c2 Scene"
           + "Needs update");// what should be in the scene
-    c2Scene.setMapSymbol("c2");
+    c2Scene.setMapSymbol(" c2 ");
     c2Scene.setBlockedLocation(false);
     scenes[SceneType.C2.ordinal()] = c2Scene;
+    c2Scene.setCanGoNorth(true);
+    c2Scene.setCanGoWest(true);
+    c2Scene.setCanGoEast(true);
+    c2Scene.setCanGoSouth(false);
     
     Scene c3Scene = new Scene();
     c3Scene.setDescription(
             "c3 Scene"
           + "Needs update");// what should be in the scene
-    c3Scene.setMapSymbol("c3");
+    c3Scene.setMapSymbol(" c3 ");
     c3Scene.setBlockedLocation(false);
     scenes[SceneType.C3.ordinal()] = c3Scene;
+    c3Scene.setCanGoNorth(true);
+    c3Scene.setCanGoWest(true);
+    c3Scene.setCanGoEast(true);
+    c3Scene.setCanGoSouth(false);
     
     Scene c4Scene = new Scene();
     c4Scene.setDescription(
             "c4 Scene"
           + "Needs update");// what should be in the scene
-    c4Scene.setMapSymbol("c4");
+    c4Scene.setMapSymbol(" c4 ");
     c4Scene.setBlockedLocation(false);
     scenes[SceneType.C4.ordinal()] = c4Scene;
+    c4Scene.setCanGoNorth(true);
+    c4Scene.setCanGoWest(true);
+    c4Scene.setCanGoEast(false);
+    c4Scene.setCanGoSouth(false);
     
     Scene c5Scene = new Scene();
     c5Scene.setDescription(
             "c5 Scene"
           + "Needs update");// what should be in the scene
-    c5Scene.setMapSymbol("c5");
+    c5Scene.setMapSymbol(" c5 ");
     c5Scene.setBlockedLocation(false);
     scenes[SceneType.C5.ordinal()] = c5Scene;
+    c5Scene.setCanGoNorth(true);
+    c5Scene.setCanGoWest(false);
+    c5Scene.setCanGoEast(false);
+    c5Scene.setCanGoSouth(true);
     
     Scene c6Scene = new Scene();
     c6Scene.setDescription(
             "C6 Scene"
           + "Needs update");// what should be in the scene
-    c6Scene.setMapSymbol("c6");
+    c6Scene.setMapSymbol(" c6 ");
     c6Scene.setBlockedLocation(false);
     scenes[SceneType.C6.ordinal()] = c6Scene;
+    c6Scene.setCanGoNorth(false);
+    c6Scene.setCanGoWest(false);
+    c6Scene.setCanGoEast(true);
+    c6Scene.setCanGoSouth(true);
     
     Scene c7Scene = new Scene();
     c7Scene.setDescription(
             "c7 Scene"
           + "Needs update");// what should be in the scene
-    c7Scene.setMapSymbol("C7");
+    c7Scene.setMapSymbol(" c7 ");
     c7Scene.setBlockedLocation(false);
     scenes[SceneType.C7.ordinal()] = c7Scene;
+    c7Scene.setCanGoNorth(true);
+    c7Scene.setCanGoWest(true);
+    c7Scene.setCanGoEast(true);
+    c7Scene.setCanGoSouth(true);
     
     Scene c8Scene = new Scene();
     c8Scene.setDescription(
             "c8 Scene"
           + "Needs update");// what should be in the scene
-    c8Scene.setMapSymbol("c8");
+    c8Scene.setMapSymbol(" c8 ");
     c8Scene.setBlockedLocation(false);
     scenes[SceneType.C8.ordinal()] = c8Scene;
+    c8Scene.setCanGoNorth(true);
+    c8Scene.setCanGoWest(true);
+    c8Scene.setCanGoEast(true);
+    c8Scene.setCanGoSouth(true);
     
     Scene c9Scene = new Scene();
     c9Scene.setDescription(
             "C9 Scene"
           + "Needs update");// what should be in the scene
-    c9Scene.setMapSymbol("C9");
+    c9Scene.setMapSymbol(" c9 ");
     c9Scene.setBlockedLocation(false);
     scenes[SceneType.C9.ordinal()] = c9Scene;
+    c9Scene.setCanGoNorth(true);
+    c9Scene.setCanGoWest(true);
+    c9Scene.setCanGoEast(false);
+    c9Scene.setCanGoSouth(true);
     
     Scene c10Scene = new Scene();
     c10Scene.setDescription(
             "C10 Scene"
           + "Needs update");// what should be in the scene
-    c10Scene.setMapSymbol("c0");
+    c10Scene.setMapSymbol(" c0 ");
     c10Scene.setBlockedLocation(false);
     scenes[SceneType.C10.ordinal()] = c10Scene;
+    c10Scene.setCanGoNorth(true);
+    c10Scene.setCanGoWest(false);
+    c10Scene.setCanGoEast(false);
+    c10Scene.setCanGoSouth(true);
     
     Scene d1Scene = new Scene();
     d1Scene.setDescription(
             "d1 Scene"
           + "Needs update");// what should be in the scene
-    d1Scene.setMapSymbol("d1");
+    d1Scene.setMapSymbol(" d1 ");
     d1Scene.setBlockedLocation(false);
     scenes[SceneType.D1.ordinal()] = d1Scene;
+    d1Scene.setCanGoNorth(false);
+    d1Scene.setCanGoWest(false);
+    d1Scene.setCanGoEast(false);
+    d1Scene.setCanGoSouth(true);
     
     Scene d2Scene = new Scene();
     d2Scene.setDescription(
             "d2 Scene"
           + "Needs update");// what should be in the scene
-    d2Scene.setMapSymbol("d2");
+    d2Scene.setMapSymbol(" d2 ");
     d2Scene.setBlockedLocation(false);
     scenes[SceneType.D2.ordinal()] = d2Scene;
+    d2Scene.setCanGoNorth(false);
+    d2Scene.setCanGoWest(false);
+    d2Scene.setCanGoEast(true);
+    d2Scene.setCanGoSouth(true);
     
     Scene d3Scene = new Scene();
     d3Scene.setDescription(
             "d3 Scene"
           + "Needs update");// what should be in the scene
-    d3Scene.setMapSymbol("d3");
+    d3Scene.setMapSymbol(" d3 ");
     d3Scene.setBlockedLocation(false);
     scenes[SceneType.D3.ordinal()] = d3Scene;
+    d3Scene.setCanGoNorth(false);
+    d3Scene.setCanGoWest(true);
+    d3Scene.setCanGoEast(true);
+    d3Scene.setCanGoSouth(false);
     
     Scene d4Scene = new Scene();
     d4Scene.setDescription(
             "d4 Scene"
           + "Needs update");// what should be in the scene
-    d4Scene.setMapSymbol("d4");
+    d4Scene.setMapSymbol(" d4 ");
     d4Scene.setBlockedLocation(false);
     scenes[SceneType.D4.ordinal()] = d4Scene;
+    d4Scene.setCanGoNorth(false);
+    d4Scene.setCanGoWest(true);
+    d4Scene.setCanGoEast(false);
+    d4Scene.setCanGoSouth(false);
     
     Scene d5Scene = new Scene();
     d5Scene.setDescription(
             "d5 Scene"
           + "Needs update");// what should be in the scene
-    d5Scene.setMapSymbol("d5");
+    d5Scene.setMapSymbol(" d5 ");
     d5Scene.setBlockedLocation(false);
     scenes[SceneType.D5.ordinal()] = d5Scene;
+    d5Scene.setCanGoNorth(true);
+    d5Scene.setCanGoWest(false);
+    d5Scene.setCanGoEast(false);
+    d5Scene.setCanGoSouth(true);
     
     Scene d6Scene = new Scene();
     d6Scene.setDescription(
             "d6 Scene"
           + "Needs update");// what should be in the scene
-    d6Scene.setMapSymbol("d6");
+    d6Scene.setMapSymbol(" d6 ");
     d6Scene.setBlockedLocation(false);
     scenes[SceneType.D6.ordinal()] = d6Scene;
+    d6Scene.setCanGoNorth(true);
+    d6Scene.setCanGoWest(false);
+    d6Scene.setCanGoEast(true);
+    d6Scene.setCanGoSouth(false);
     
     Scene d7Scene = new Scene();
     d7Scene.setDescription(
             "d7 Scene"
           + "Needs update");// what should be in the scene
-    d7Scene.setMapSymbol("d7");
+    d7Scene.setMapSymbol(" d7 ");
     d7Scene.setBlockedLocation(false);
     scenes[SceneType.D7.ordinal()] = d7Scene;
+    d7Scene.setCanGoNorth(true);
+    d7Scene.setCanGoWest(true);
+    d7Scene.setCanGoEast(true);
+    d7Scene.setCanGoSouth(true);
     
     Scene d8Scene = new Scene();
     d8Scene.setDescription(
             "d8 Scene"
           + "Needs update");// what should be in the scene
-    d8Scene.setMapSymbol("d8");
+    d8Scene.setMapSymbol(" d8 ");
     d8Scene.setBlockedLocation(false);
     scenes[SceneType.D8.ordinal()] = d8Scene;
+    d8Scene.setCanGoNorth(true);
+    d8Scene.setCanGoWest(true);
+    d8Scene.setCanGoEast(true);
+    d8Scene.setCanGoSouth(false);
     
     Scene d9Scene = new Scene();
     d9Scene.setDescription(
             "d9 Scene"
           + "Needs update");// what should be in the scene
-    d9Scene.setMapSymbol("d9");
+    d9Scene.setMapSymbol(" d9 ");
     d9Scene.setBlockedLocation(false);
     scenes[SceneType.D9.ordinal()] = d9Scene;
+    d9Scene.setCanGoNorth(true);
+    d9Scene.setCanGoWest(true);
+    d9Scene.setCanGoEast(false);
+    d9Scene.setCanGoSouth(false);
     
     Scene d10Scene = new Scene();
     d10Scene.setDescription(
             "d10 Scene"
           + "Needs update");// what should be in the scene
-    d10Scene.setMapSymbol("d0");
+    d10Scene.setMapSymbol(" d0 ");
     d10Scene.setBlockedLocation(false);
     scenes[SceneType.D10.ordinal()] = d10Scene;
+    d10Scene.setCanGoNorth(true);
+    d10Scene.setCanGoWest(false);
+    d10Scene.setCanGoEast(false);
+    d10Scene.setCanGoSouth(true);
     
     Scene e1Scene = new Scene();
     e1Scene.setDescription(
             "e1 Scene"
           + "Needs update");// what should be in the scene
-    e1Scene.setMapSymbol("e1");
+    e1Scene.setMapSymbol(" e1 ");
     e1Scene.setBlockedLocation(false);
     scenes[SceneType.E1.ordinal()] = e1Scene;
+    e1Scene.setCanGoNorth(true);
+    e1Scene.setCanGoWest(false);
+    e1Scene.setCanGoEast(false);
+    e1Scene.setCanGoSouth(false);
     
     Scene e2Scene = new Scene();
     e2Scene.setDescription(
             "e2 Scene"
           + "Needs update");// what should be in the scene
-    e2Scene.setMapSymbol("e2");
+    e2Scene.setMapSymbol(" e2 ");
     e2Scene.setBlockedLocation(false);
     scenes[SceneType.E2.ordinal()] = e2Scene;
+    e2Scene.setCanGoNorth(true);
+    e2Scene.setCanGoWest(false);
+    e2Scene.setCanGoEast(true);
+    e2Scene.setCanGoSouth(false);
     
     Scene e3Scene = new Scene();
     e3Scene.setDescription(
             "e3 Scene"
           + "Needs update");// what should be in the scene
-    e3Scene.setMapSymbol("e3");
+    e3Scene.setMapSymbol(" e3 ");
     e3Scene.setBlockedLocation(false);
     scenes[SceneType.E3.ordinal()] = e3Scene;
+    e3Scene.setCanGoNorth(false);
+    e3Scene.setCanGoWest(true);
+    e3Scene.setCanGoEast(false);
+    e3Scene.setCanGoSouth(false);
     
     Scene e4Scene = new Scene();
     e4Scene.setDescription(
             "e4 Scene"
           + "Needs update");// what should be in the scene
-    e4Scene.setMapSymbol("e4");
+    e4Scene.setMapSymbol(" e4 ");
     e4Scene.setBlockedLocation(false);
     scenes[SceneType.E4.ordinal()] = e4Scene;
+    e4Scene.setCanGoNorth(false);
+    e4Scene.setCanGoWest(true);
+    e4Scene.setCanGoEast(false);
+    e4Scene.setCanGoSouth(false);
     
     Scene e5Scene = new Scene();
     e5Scene.setDescription(
@@ -402,50 +614,73 @@ public class Scene implements Serializable{
                    + "illed with grotesque statues of monsters battling men. As "
                    + "you walk around the frozen battlefield you notice a door t"
                    + "o the north as well as a door to the west.");// what should be in the scene
-    e5Scene.setMapSymbol("e5");
+    e5Scene.setMapSymbol(" e5 ");
     e5Scene.setBlockedLocation(false);
     scenes[SceneType.E5.ordinal()] = e5Scene;
+    e5Scene.setCanGoNorth(true);
+    e5Scene.setCanGoWest(true);
+    e5Scene.setCanGoEast(false);
+    e5Scene.setCanGoSouth(false);
     
     Scene e6Scene = new Scene();
     e6Scene.setDescription(
             "e6 Scene"
           + "Needs update");// what should be in the scene
-    e6Scene.setMapSymbol("e6");
+    e6Scene.setMapSymbol(" e6 ");
     e6Scene.setBlockedLocation(false);
     scenes[SceneType.E6.ordinal()] = e6Scene;
+    e6Scene.setCanGoNorth(false);
+    e6Scene.setCanGoWest(false);
+    e6Scene.setCanGoEast(true);
+    e6Scene.setCanGoSouth(false);
     
     Scene e7Scene = new Scene();
     e7Scene.setDescription(
             "E7 Scene"
           + "Needs update");// what should be in the scene
-    e7Scene.setMapSymbol("A7");
+    e7Scene.setMapSymbol(" e7 ");
     e7Scene.setBlockedLocation(false);
     scenes[SceneType.E7.ordinal()] = e7Scene;
+    e7Scene.setCanGoNorth(true);
+    e7Scene.setCanGoWest(true);
+    e7Scene.setCanGoEast(false);
+    e7Scene.setCanGoSouth(false);
     
     Scene e8Scene = new Scene();
     e8Scene.setDescription(
             "e8 Scene"
           + "Needs update");// what should be in the scene
-    e8Scene.setMapSymbol("e8");
+    e8Scene.setMapSymbol(" e8 ");
     e8Scene.setBlockedLocation(false);
     scenes[SceneType.E8.ordinal()] = e8Scene;
+    e8Scene.setCanGoNorth(false);
+    e8Scene.setCanGoWest(false);
+    e8Scene.setCanGoEast(true);
+    e8Scene.setCanGoSouth(false);
     
     Scene e9Scene = new Scene();
     e9Scene.setDescription(
             "e9 Scene"
           + "Needs update");// what should be in the scene
-    e9Scene.setMapSymbol("e9");
+    e9Scene.setMapSymbol(" e9 ");
     e9Scene.setBlockedLocation(false);
     scenes[SceneType.E9.ordinal()] = e9Scene;
+    e9Scene.setCanGoNorth(false);
+    e9Scene.setCanGoWest(true);
+    e9Scene.setCanGoEast(true);
+    e9Scene.setCanGoSouth(false);
     
     Scene e10Scene = new Scene();
     e10Scene.setDescription(
             "e10 Scene"
           + "Needs update");// what should be in the scene
-    e10Scene.setMapSymbol("e0");
+    e10Scene.setMapSymbol(" e0 ");
     e10Scene.setBlockedLocation(false);
     scenes[SceneType.E10.ordinal()] = e10Scene;
-    
+    e10Scene.setCanGoNorth(true);
+    e10Scene.setCanGoWest(true);
+    e10Scene.setCanGoEast(false);
+    e10Scene.setCanGoSouth(false);
     
    
     

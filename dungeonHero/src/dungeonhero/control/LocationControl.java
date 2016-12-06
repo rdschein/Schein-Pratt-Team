@@ -34,6 +34,8 @@ public class LocationControl {
         player.setPlayerRow(5);
         player.setPlayerCol(5);
         
+        map.visitLocation(5,5);
+        
         
         
     }

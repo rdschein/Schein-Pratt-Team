@@ -102,6 +102,13 @@ public class Map implements Serializable {
         return locations;
     }
     
+    public void visitLocation(int row, int col)
+    {
+        row = row-1;
+        col = col - 1;
+        locations[row][col].setVisited(true);
+    }
+    
     
     
     
