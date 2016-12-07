@@ -5,11 +5,14 @@
  */
 package dungeonhero.control;
 
+import dungeonhero.Location;
 import dungeonhero.Map;
 import dungeonhero.Player;
 import dungeonhero.Scene;
+import dungeonhero.Actor;
 import static dungeonhero.Scene.createScenes;
 import dungeonhero.exceptions.LocationControlException;
+import java.awt.Point;
 
 /**
  *
@@ -39,28 +42,48 @@ public class LocationControl {
         
         
     }
-    static void movePlayerNorth(Map map, Player player)
+    public static void moveCharacterToNewLoc(Actor character ,Point coordinates, Location[][] locations )
+    {
+        if(character == null){}
+        if(locations == null){}
+        if(coordinates == null || 
+                coordinates.x < 0 ||
+                coordinates.x > 5 ||
+                coordinates.y < 0 ||
+                coordinates.y > 10){}
+        
+      //  character.setPlayerRow(coordinates.x); 
+      //  character.setPlayerCol(coordinates.y); 
+        
+        Location oldLocation = locations[character.getPlayerRow()][character.getPlayerCol()];
+        Location newLocation = locations[coordinates.x][coordinates.y];
+        
+        oldLocation.getActors().remove(character);
+        newLocation.getActors().add(character);
+   
+    }
+    
+    public static void movePlayerNorth(Map map, Player player)
     {
        player.setPlayerRow(player.getPlayerRow()+1);
         
        map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
     
     }
-    static void movePlayerWest(Map map, Player player)
+    public static void movePlayerWest(Map map, Player player)
     {
         player.setPlayerRow(player.getPlayerCol()-1);
         
         map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
-    
     }
-    static void movePlayerEasth(Map map, Player player)
+    public static void movePlayerEasth(Map map, Player player)
     {
        player.setPlayerRow(player.getPlayerCol()+1);
         
        map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
     
     }
-    static void movePlayerSouth(Map map, Player player)
+    public static void movePlayerSouth(Map map, Player player)
     {
        player.setPlayerRow(player.getPlayerRow()-1);
         

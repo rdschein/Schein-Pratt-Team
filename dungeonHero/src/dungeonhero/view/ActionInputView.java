@@ -24,6 +24,7 @@ public class ActionInputView extends View {
                 switch(choice){
             case "go north":
                
+                
                 break;
             case "go south":
                 System.out.println("go north was called");
