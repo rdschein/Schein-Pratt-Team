@@ -55,7 +55,7 @@ public class LocationControl {
       //  character.setPlayerRow(coordinates.x); 
       //  character.setPlayerCol(coordinates.y); 
         
-        Location oldLocation = locations[character.getPlayerRow()][character.getPlayerCol()];
+        Location oldLocation = locations[character.getActorRow()][character.getActorCol()];
         Location newLocation = locations[coordinates.x][coordinates.y];
         
         oldLocation.getActors().remove(character);
