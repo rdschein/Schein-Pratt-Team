@@ -5,7 +5,7 @@
  */
 package dungeonhero.view;
 
-import dungeonhero.Player;
+import dungeonhero.Actor;
 import dungeonhero.control.GameControl;
 import java.util.Scanner;
 
@@ -94,7 +94,7 @@ public class StartProgramView extends View {
             return false;
         }
         
-        Player player = GameControl.createPlayer(playersName);
+        Actor player = GameControl.createPlayer(playersName);
         
         if (player == null) {
             System.out.println("\nError creating the player.");
@@ -106,7 +106,7 @@ public class StartProgramView extends View {
         return true;
     }
 
-    private void displayNextView(Player player) {
+    private void displayNextView(Actor player) {
         System.out.println("\n==================================================================="
                          + "\nAt Long last you have found the underworld dungeon! After         "
                          + "\nsearching the Underworld far and wid e you have finally found     "

@@ -7,7 +7,6 @@ package dungeonhero.control;
 
 import dungeonhero.Location;
 import dungeonhero.Map;
-import dungeonhero.Player;
 import dungeonhero.Scene;
 import dungeonhero.Actor;
 import static dungeonhero.Scene.createScenes;
@@ -33,9 +32,9 @@ public class LocationControl {
         return map;
     }
 
-    static void moveActorsToStartingLocation(Map map, Player player) {
-        player.setPlayerRow(5);
-        player.setPlayerCol(5);
+    static void moveActorsToStartingLocation(Map map, Actor player) {
+        player.setActorRow(5);
+        player.setActorCol(5);
         
         map.visitLocation(5,5);
         
@@ -63,33 +62,33 @@ public class LocationControl {
    
     }
     
-    public static void movePlayerNorth(Map map, Player player)
-    {
-       player.setPlayerRow(player.getPlayerRow()+1);
-        
-       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
-    
-    }
-    public static void movePlayerWest(Map map, Player player)
-    {
-        player.setPlayerRow(player.getPlayerCol()-1);
-        
-        map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
-    }
-    public static void movePlayerEasth(Map map, Player player)
-    {
-       player.setPlayerRow(player.getPlayerCol()+1);
-        
-       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
-    
-    }
-    public static void movePlayerSouth(Map map, Player player)
-    {
-       player.setPlayerRow(player.getPlayerRow()-1);
-        
-       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
-    
-    }
+//    public static void movePlayerNorth(Map map, Actor player)
+//    {
+//       player.setPlayerRow(player.getPlayerRow()+1);
+//        
+//       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
+//    
+//    }
+//    public static void movePlayerWest(Map map, Player player)
+//    {
+//        player.setPlayerRow(player.getPlayerCol()-1);
+//        
+//        map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
+//    }
+//    public static void movePlayerEasth(Map map, Player player)
+//    {
+//       player.setPlayerRow(player.getPlayerCol()+1);
+//        
+//       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
+//    
+//    }
+//    public static void movePlayerSouth(Map map, Player player)
+//    {
+//       player.setPlayerRow(player.getPlayerRow()-1);
+//        
+//       map.visitLocation(player.getPlayerRow(), player.getPlayerCol());
+//    
+//    }
     
     
     public int getRandomRow(int row) throws LocationControlException {

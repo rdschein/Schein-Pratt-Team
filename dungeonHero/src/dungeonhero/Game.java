@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Game implements Serializable {
     private Items[] inventory;
     private Enemies[] enemies;
-    public Player player;
+    public Actor player;
     public Map map;
     
     public Items[] getInventory() {
@@ -33,11 +33,11 @@ public class Game implements Serializable {
         this.enemies = enemies;
     }
     
-    public Player getPlayer() {
+    public Actor getPlayer() {
         return player;
     }
     
-    public void setPlayer(Player player) {
+    public void setPlayer(Actor player) {
         this.player = player;
     }
     

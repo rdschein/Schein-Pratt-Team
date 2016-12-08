@@ -18,6 +18,7 @@ public class Actor implements Serializable {
     private String name;
     private int actorRow;
     private int actorCol;
+    private int gameOverCount;
 
     public int getActorRow() {
         return actorRow;
@@ -49,11 +50,20 @@ public class Actor implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+    
+     public int getGameOverCount() {
+        return gameOverCount;
+    }
+
+    public void setGameOverCount(int gameOverCount) {
+        this.gameOverCount = gameOverCount;
+    }
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 61 * hash + Objects.hashCode(this.name);
+        hash = 61 * hash + this.gameOverCount;
         return hash;
     }
 

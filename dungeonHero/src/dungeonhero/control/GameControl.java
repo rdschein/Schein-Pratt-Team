@@ -5,13 +5,13 @@
  */
 package dungeonhero.control;
 
+import dungeonhero.Actor;
 import dungeonhero.DungeonHero;
 import dungeonhero.Enemies;
 import dungeonhero.Game;
 import dungeonhero.Items;
 import dungeonhero.Location;
 import dungeonhero.Map;
-import dungeonhero.Player;
 import dungeonhero.Scene;
 import java.util.ArrayList;
 //import dungeonhero.control.LocationControl;
@@ -22,14 +22,14 @@ import java.util.ArrayList;
  */
 public class GameControl {
 
-    public static Player createPlayer(String name) {
+    public static Actor createPlayer(String name) {
         //public static Player createPlayer(string name){
         
             if (name == null){
                 return null;
             }
         
-            Player player = new Player();
+            Actor player = new Actor();
             player.setName(name);
             
             DungeonHero.setPlayer(player);
@@ -37,7 +37,7 @@ public class GameControl {
             return player;
         }
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Actor player) {
         Game game = new Game();
         DungeonHero.setCurrentGame(game);
         

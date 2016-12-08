@@ -5,7 +5,6 @@
  */
 package dungeonhero.view;
 import dungeonhero.control.GameControl;
-import dungeonhero.Player;
 import java.util.Scanner;
 import dungeonhero.DungeonHero;
 import dungeonhero.view.GameMenuView;

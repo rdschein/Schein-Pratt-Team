@@ -4,10 +4,12 @@
  * and open the template in the editor.
  */
 package dungeonhero.view;
+import dungeonhero.Actor;
 import java.util.Scanner;
 import dungeonhero.Game;
+import dungeonhero.Location;
 import dungeonhero.Map;
-import dungeonhero.Player;
+import java.awt.Point;
 /**
  *
  * @author Dylan Pratt
@@ -23,7 +25,7 @@ public class ActionInputView extends View {
     public boolean doAction(String choice) {
                 switch(choice){
             case "go north":
-               
+             // moveCharacterToNewLoc(character ,coordinates, locations);
                 
                 break;
             case "go south":
@@ -35,7 +37,7 @@ public class ActionInputView extends View {
             case "go east":
                 System.out.println("go north was called");
                 break;
-            case "attack": // creat new game
+            case "attack": // create new game
                 System.out.println("attack funtion is called");
                 getAttackOption();
                 break;

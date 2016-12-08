@@ -49,7 +49,7 @@ public class MainMenuView extends View {
         return false;
     }
 
-    private void startNewGame() {
+    private void startNewGame() {  
         GameControl.createNewGame(DungeonHero.getPlayer());
         
         // display the game

@@ -22,14 +22,14 @@ public class DungeonHero {
         DungeonHero.currentGame = currentGame;
     }
 
-    public static Player getPlayer() {
+    public static Actor getPlayer() {
         return player;
     }
 
-    public static void setPlayer(Player player) {
+    public static void setPlayer(Actor player) {
         DungeonHero.player = player;
     }
-    private static Player player = null;
+    private static Actor player = null;
     /**
      * @param args the command line arguments
      */

@@ -10,6 +10,7 @@ import dungeonhero.Game;
 import dungeonhero.Items;
 import dungeonhero.Location;
 import dungeonhero.Map;
+import dungeonhero.Actor;
 import dungeonhero.control.GameControl;
 import java.util.Scanner;
 import dungeonhero.view.MainMenuView;
