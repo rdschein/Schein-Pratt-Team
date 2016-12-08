@@ -12,10 +12,12 @@ import dungeonhero.Location;
 import dungeonhero.Map;
 import dungeonhero.Actor;
 import dungeonhero.control.GameControl;
+import static dungeonhero.control.LocationControl.moveCharacterToNewLoc;
 import java.util.Scanner;
 import dungeonhero.view.MainMenuView;
 import dungeonhero.view.InventoryView;
 import dungeonhero.view.TheBossBattle;
+import java.awt.Point;
 
  // @author Dylan
 public class GameMenuView extends View {
@@ -64,9 +66,42 @@ public class GameMenuView extends View {
                 HelpMenuView help = new HelpMenuView();
                 help.display();
                 break;
-            case "B":
-                TheBossBattle boss = new TheBossBattle();     // this is just a cheat that I can use to test the BossBattle dislay
-                boss.display();
+            case "GO NORTH":
+                Point newLoc = new Point();
+                newLoc.x = DungeonHero.getPlayer().getActorRow()-1;
+                newLoc.y = DungeonHero.getPlayer().getActorCol();
+            
+                moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc, DungeonHero.getCurrentGame().getMap().getLocations());
+                DungeonHero.getCurrentGame().map.visitLocation(newLoc.x, newLoc.y);
+                this.displayMap();
+                break;
+            case "GO SOUTH":
+                Point newLoc2 = new Point();
+                newLoc2.x = DungeonHero.getPlayer().getActorRow()+1;
+                newLoc2.y = DungeonHero.getPlayer().getActorCol();
+            
+                moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc2, DungeonHero.getCurrentGame().getMap().getLocations());
+                DungeonHero.getCurrentGame().map.visitLocation(newLoc2.x, newLoc2.y);
+                this.displayMap();
+                break;
+            case "GO WEST":
+                Point newLoc3 = new Point();
+                newLoc3.x = DungeonHero.getPlayer().getActorRow();
+                newLoc3.y = DungeonHero.getPlayer().getActorCol()-1;
+            
+                moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc3, DungeonHero.getCurrentGame().getMap().getLocations());
+                DungeonHero.getCurrentGame().map.visitLocation(newLoc3.x, newLoc3.y);
+                this.displayMap();
+                break;
+            case "GO EAST":
+                 Point newLoc4 = new Point();
+                newLoc4.x = DungeonHero.getPlayer().getActorRow();
+                newLoc4.y = DungeonHero.getPlayer().getActorCol()+1;
+            
+                moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc4, DungeonHero.getCurrentGame().getMap().getLocations());
+                DungeonHero.getCurrentGame().map.visitLocation(newLoc4.x, newLoc4.y);
+                this.displayMap();
+                break;
                 
             default:
                 System.out.println("Invaild selection Try again");
@@ -114,7 +149,7 @@ public class GameMenuView extends View {
      //   inventory[Item.key.ordinal()] = key;
     }
 
-    private void displayMap() {
+    public void displayMap() {
        Game game = DungeonHero.getCurrentGame();
        Map map = game.getMap();
        Location[][] locations = map.getLocations();

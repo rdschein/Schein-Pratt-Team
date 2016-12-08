@@ -33,33 +33,45 @@ public class LocationControl {
     }
 
     static void moveActorsToStartingLocation(Map map, Actor player) {
-        player.setActorRow(5);
-        player.setActorCol(5);
+        player.setActorRow(4);
+        player.setActorCol(4);
         
-        map.visitLocation(5,5);
+        map.visitLocation(4,4);
         
         
         
     }
     public static void moveCharacterToNewLoc(Actor character ,Point coordinates, Location[][] locations )
     {
-        if(character == null){}
-        if(locations == null){}
+        if(character == null)
+        {
+        System.out.println("The problem is with the character");
+        }
+        if(locations == null)
+        {
+        System.out.println("The problem is with the locations");
+        }
         if(coordinates == null || 
                 coordinates.x < 0 ||
                 coordinates.x > 5 ||
                 coordinates.y < 0 ||
-                coordinates.y > 10){}
+                coordinates.y > 10)
+        {
+        System.out.println("The problem is with the coordinates");
+        }
+      
+        Location oldLocation = locations[character.getActorRow()][character.getActorCol()]; // testing
+       // Location oldLocation = locations[4][character.getActorCol()]; // testing
         
-      //  character.setPlayerRow(coordinates.x); 
-      //  character.setPlayerCol(coordinates.y); 
-        
-        Location oldLocation = locations[character.getActorRow()][character.getActorCol()];
         Location newLocation = locations[coordinates.x][coordinates.y];
+      
         
         oldLocation.getActors().remove(character);
         newLocation.getActors().add(character);
-   
+        
+        character.setActorRow(coordinates.x);
+        character.setActorCol(coordinates.y);
+        
     }
     
 //    public static void movePlayerNorth(Map map, Actor player)

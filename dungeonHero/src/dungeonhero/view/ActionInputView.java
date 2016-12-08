@@ -5,10 +5,12 @@
  */
 package dungeonhero.view;
 import dungeonhero.Actor;
+import dungeonhero.DungeonHero;
 import java.util.Scanner;
 import dungeonhero.Game;
 import dungeonhero.Location;
 import dungeonhero.Map;
+import static dungeonhero.control.LocationControl.moveCharacterToNewLoc;
 import java.awt.Point;
 /**
  *
@@ -24,19 +26,39 @@ public class ActionInputView extends View {
 @Override
     public boolean doAction(String choice) {
                 switch(choice){
-            case "go north":
-             // moveCharacterToNewLoc(character ,coordinates, locations);
-                
-                break;
-            case "go south":
-                System.out.println("go north was called");
-                break;
-            case "go west":
-                System.out.println("go north was called");
-                break;
-            case "go east":
-                System.out.println("go north was called");
-                break;
+//            case "go north":
+//            Point newLoc = new Point();
+//            newLoc.x = DungeonHero.getPlayer().getActorRow()-1;
+//            newLoc.y = DungeonHero.getPlayer().getActorCol();
+//            
+//            moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc, DungeonHero.getCurrentGame().getMap().getLocations());
+//            DungeonHero.getCurrentGame().map.visitLocation(newLoc.x, newLoc.y);
+//                
+//                break;
+//            case "go south":
+//            Point newLoc2 = new Point();
+//            newLoc2.x = DungeonHero.getPlayer().getActorRow()+1;
+//            newLoc2.y = DungeonHero.getPlayer().getActorCol();
+//            
+//            moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc2, DungeonHero.getCurrentGame().getMap().getLocations());
+//            DungeonHero.getCurrentGame().map.visitLocation(newLoc2.x, newLoc2.y);
+//                break;
+//            case "go west":
+//            Point newLoc3 = new Point();
+//            newLoc3.x = DungeonHero.getPlayer().getActorRow();
+//            newLoc3.y = DungeonHero.getPlayer().getActorCol()-1;
+//            
+//            moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc3, DungeonHero.getCurrentGame().getMap().getLocations());
+//            DungeonHero.getCurrentGame().map.visitLocation(newLoc3.x, newLoc3.y);
+//                break;
+//            case "go east":
+//                 Point newLoc4 = new Point();
+//            newLoc4.x = DungeonHero.getPlayer().getActorRow();
+//            newLoc4.y = DungeonHero.getPlayer().getActorCol()+1;
+//            
+//            moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc4, DungeonHero.getCurrentGame().getMap().getLocations());
+//            DungeonHero.getCurrentGame().map.visitLocation(newLoc4.x, newLoc4.y);
+//                break;
             case "attack": // create new game
                 System.out.println("attack funtion is called");
                 getAttackOption();

@@ -37,8 +37,8 @@ public class Actor implements Serializable {
     }
 
     public Actor() {
-        actorRow = 5;
-        actorCol = 5;
+        actorRow = 4;
+        actorCol = 4;
     }
     
     

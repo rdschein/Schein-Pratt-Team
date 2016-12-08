@@ -104,8 +104,8 @@ public class Map implements Serializable {
     
     public void visitLocation(int row, int col)
     {
-        row = row-1;
-        col = col - 1;
+        row = row;
+        col = col;
         locations[row][col].setVisited(true);
     }
     
