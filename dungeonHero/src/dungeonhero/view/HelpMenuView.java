@@ -5,6 +5,9 @@
  */
 package dungeonhero.view;
 
+import dungeonhero.DungeonHero;
+import dungeonhero.Game;
+import dungeonhero.Items;
 import java.util.Scanner;
 import dungeonhero.view.MainMenuView;
 
@@ -45,7 +48,8 @@ public class HelpMenuView extends View {
                 System.out.println("How to play instructions her");
                 break;
             case "I":
-                System.out.println("How to items instructions her");
+                System.out.println("Possible items in game");
+                this.viewInventory();
                 break;
                 
             default:
@@ -56,4 +60,31 @@ public class HelpMenuView extends View {
         return false;
     }
     
+      private void viewInventory() {
+        //double bow = DungeonHero.getPlayer().playerInventory[1].getQuantity();
+        StringBuilder line;
+        
+        Game game = DungeonHero.getCurrentGame();
+        Items[] inventory = game.getInventory();
+        
+        System.out.println("\n    List of Possible Inventory Items");
+        line = new StringBuilder();
+        
+        System.out.println(line.toString());
+        
+        for (Items item : inventory)
+        {
+            
+            line = new StringBuilder(
+            line.insert(0, item.getInventoryType()));
+            
+                System.out.println(line.toString());
+            
+            line.setLength(0);
+           
+        
+        }
+    
+    
+}
 }

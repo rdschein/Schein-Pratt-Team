@@ -45,9 +45,9 @@ public class GameMenuView extends View {
                 this.displayMap();
                 break;
             case "I":
-                //InventoryView inventory = new InventoryView();
-                //inventory.display();
-                this.viewInventory();
+                InventoryView inventory = new InventoryView();
+                inventory.display();
+                //this.viewInventory();
                 System.out.println("---------------------------------\n" +
                     "  Game Menu                      \n" +
                     "---------------------------------\n" +
@@ -153,6 +153,7 @@ public class GameMenuView extends View {
     }
 
     private void viewInventory() {
+        //double bow = DungeonHero.getPlayer().playerInventory[1].getQuantity();
         StringBuilder line;
         
         Game game = DungeonHero.getCurrentGame();
@@ -165,12 +166,14 @@ public class GameMenuView extends View {
         
         for (Items item : inventory)
         {
+            
             line = new StringBuilder(
             line.insert(0, item.getInventoryType()));
             
-            System.out.println(line.toString());
+                System.out.println(line.toString());
             
             line.setLength(0);
+           
         
         }
         

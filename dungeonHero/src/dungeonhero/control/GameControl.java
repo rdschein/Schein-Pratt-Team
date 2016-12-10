@@ -56,11 +56,11 @@ public class GameControl {
     }
 
     public static Items[] createInventoryList() {
-        Items[] inventory = new Items[7];
+        Items[] inventory = new Items[6];
         
         Items sword = new Items();
         sword.setInventoryType("Sword");
-        sword.setQuantity(0);
+        sword.setQuantity(1);
         sword.setAmountRequired(0);
         sword.setDamage(3);
         inventory[Item.sword.ordinal()] = sword;
