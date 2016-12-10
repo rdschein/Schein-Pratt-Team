@@ -109,6 +109,11 @@ public class Map implements Serializable {
         locations[row][col].setVisited(true);
     }
     
+    public Location getLocation(int x, int y)
+    {  
+        return locations[x][y];
+    }
+    
     
     
     

@@ -100,6 +100,13 @@ public class Location implements Serializable {
        scene = scenex;
     }
     
+    public Scene getScene()
+    {
+        return scene;
+    }
+    
+    
+    
     
     
 }

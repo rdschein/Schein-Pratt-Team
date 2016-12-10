@@ -67,40 +67,73 @@ public class GameMenuView extends View {
                 help.display();
                 break;
             case "GO NORTH":
+               
                 Point newLoc = new Point();
                 newLoc.x = DungeonHero.getPlayer().getActorRow()-1;
                 newLoc.y = DungeonHero.getPlayer().getActorCol();
+                if(DungeonHero.getCurrentGame().getMap().getLocation(newLoc.x+1, newLoc.y).getScene().isCanGoNorth() == true){
             
                 moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc, DungeonHero.getCurrentGame().getMap().getLocations());
                 DungeonHero.getCurrentGame().map.visitLocation(newLoc.x, newLoc.y);
+                
+                System.out.println(DungeonHero.getCurrentGame().getMap().getLocation(newLoc.x, newLoc.y).getScene().getDescription());
+                
                 this.displayMap();
+                }else
+                 {
+                 System.out.print("You are not able to do that");
+                 }
                 break;
             case "GO SOUTH":
                 Point newLoc2 = new Point();
                 newLoc2.x = DungeonHero.getPlayer().getActorRow()+1;
                 newLoc2.y = DungeonHero.getPlayer().getActorCol();
             
+                if(DungeonHero.getCurrentGame().getMap().getLocation(newLoc2.x-1, newLoc2.y).getScene().isCanGoSouth() == true){
                 moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc2, DungeonHero.getCurrentGame().getMap().getLocations());
                 DungeonHero.getCurrentGame().map.visitLocation(newLoc2.x, newLoc2.y);
+                
+                System.out.println(DungeonHero.getCurrentGame().getMap().getLocation(newLoc2.x, newLoc2.y).getScene().getDescription());
+                
                 this.displayMap();
+                }else
+                {
+                System.out.print("You are not able to do that");
+                }
                 break;
             case "GO WEST":
                 Point newLoc3 = new Point();
                 newLoc3.x = DungeonHero.getPlayer().getActorRow();
                 newLoc3.y = DungeonHero.getPlayer().getActorCol()-1;
             
+                if(DungeonHero.getCurrentGame().getMap().getLocation(newLoc3.x, newLoc3.y+1).getScene().isCanGoWest() == true){
                 moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc3, DungeonHero.getCurrentGame().getMap().getLocations());
                 DungeonHero.getCurrentGame().map.visitLocation(newLoc3.x, newLoc3.y);
+                
+                System.out.println(DungeonHero.getCurrentGame().getMap().getLocation(newLoc3.x, newLoc3.y).getScene().getDescription());
+                
                 this.displayMap();
+                }else
+                {
+                  System.out.print("You are not able to do that"); 
+                }
                 break;
             case "GO EAST":
                  Point newLoc4 = new Point();
                 newLoc4.x = DungeonHero.getPlayer().getActorRow();
                 newLoc4.y = DungeonHero.getPlayer().getActorCol()+1;
-            
+                
+                if(DungeonHero.getCurrentGame().getMap().getLocation(newLoc4.x, newLoc4.y-1).getScene().isCanGoEast() == true){
                 moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc4, DungeonHero.getCurrentGame().getMap().getLocations());
                 DungeonHero.getCurrentGame().map.visitLocation(newLoc4.x, newLoc4.y);
+                
+                System.out.println(DungeonHero.getCurrentGame().getMap().getLocation(newLoc4.x, newLoc4.y).getScene().getDescription());// displays the scene
+                
                 this.displayMap();
+                 }else
+                {
+                    System.out.print("You are not able to do that"); 
+                }
                 break;
                 
             default:
