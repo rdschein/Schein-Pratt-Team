@@ -100,13 +100,6 @@ public class GameControl {
         enchantedSword.setDamage(5);
         inventory[Item.enchantedSword.ordinal()] = enchantedSword;
         
-        Items key = new Items();
-        key.setInventoryType("Key");
-        key.setQuantity(0);
-        key.setAmountRequired(1);
-        key.setDamage(0);
-        inventory[Item.key.ordinal()] = key;
-        
         return inventory;
     }
 
@@ -183,9 +176,7 @@ public class GameControl {
         bomb,
         grapple,
         harp,
-        enchantedSword,
-        key   
-        
+        enchantedSword, 
     }
     
     

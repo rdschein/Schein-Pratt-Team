@@ -21,6 +21,15 @@ public class Scene implements Serializable{
     private boolean canGoNorth;
     private boolean canGoWest;
     private boolean canGoEast;
+    private boolean containsBow;
+
+    public boolean isContainsBow() {
+        return containsBow;
+    }
+
+    public void setContainsBow(boolean containsBow) {
+        this.containsBow = containsBow;
+    }
 
     public boolean isCanGoNorth() {
         return canGoNorth;
@@ -56,6 +65,8 @@ public class Scene implements Serializable{
     private boolean canGoSouth;
 
     public Scene() {
+        containsBow = false;
+        
     }
     public static Scene[] createScenes()
     {
@@ -582,6 +593,7 @@ public class Scene implements Serializable{
     e2Scene.setCanGoWest(false);
     e2Scene.setCanGoEast(true);
     e2Scene.setCanGoSouth(false);
+    e2Scene.setContainsBow(true);
     
     Scene e3Scene = new Scene();
     e3Scene.setDescription(

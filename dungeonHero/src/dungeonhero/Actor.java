@@ -6,6 +6,7 @@
  */
 package dungeonhero;
 
+import dungeonhero.control.GameControl;
 import java.io.Serializable;
 import java.util.Objects;
 /**
@@ -19,6 +20,24 @@ public class Actor implements Serializable {
     private int actorRow;
     private int actorCol;
     private int gameOverCount;
+    public boolean hasBow;
+    public Items[] playerInventory;
+
+    public Items[] getPlayerInventory() {
+        return playerInventory;
+    }
+
+    public void setPlayerInventory(Items[] playerInventory) {
+        this.playerInventory = playerInventory;
+    }
+
+    public boolean isHasBow() {
+        return hasBow;
+    }
+
+    public void setHasBow(boolean hasBow) {
+        this.hasBow = hasBow;
+    }
 
     public int getActorRow() {
         return actorRow;
@@ -39,6 +58,8 @@ public class Actor implements Serializable {
     public Actor() {
         actorRow = 4;
         actorCol = 4;
+        hasBow = false;
+        playerInventory = GameControl.createInventoryList();
     }
     
     
