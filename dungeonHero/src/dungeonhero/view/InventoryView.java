@@ -51,12 +51,14 @@ public class InventoryView extends View {
         }
         if(DungeonHero.getPlayer().playerInventory[3].getQuantity() == 1)
         {
-            System.out.println("Grapple");
+            System.out.println("Grappling Hook");
         }
         if(DungeonHero.getPlayer().playerInventory[4].getQuantity() == 1)
         {
             System.out.println("Harp");
         }
+        
+        System.out.println("Press Q to return to game menu");
     }
   
 

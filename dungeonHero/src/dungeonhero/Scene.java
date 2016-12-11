@@ -521,7 +521,7 @@ public class Scene implements Serializable{
     d3Scene.setCanGoNorth(false);
     d3Scene.setCanGoWest(true);
     d3Scene.setCanGoEast(true);
-    d3Scene.setCanGoSouth(false);
+    d3Scene.setCanGoSouth(true);
     
     Scene d4Scene = new Scene();
     d4Scene.setDescription(
@@ -651,7 +651,7 @@ public class Scene implements Serializable{
     e4Scene.setMapSymbol(" e4 ");
     e4Scene.setBlockedLocation(false);
     scenes[SceneType.E4.ordinal()] = e4Scene;
-    e4Scene.setCanGoNorth(false);
+    e4Scene.setCanGoNorth(true);
     e4Scene.setCanGoWest(true);
     e4Scene.setCanGoEast(false);
     e4Scene.setCanGoSouth(false);

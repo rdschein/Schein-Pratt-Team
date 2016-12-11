@@ -135,7 +135,7 @@ public class GameMenuView extends View {
                     System.out.print("You are not able to do that"); 
                 }
                 break;
-                case "grab bow": 
+            case "GRAB BOW": 
                 if(DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(),DungeonHero.getPlayer().getActorCol()) == 
                         DungeonHero.getCurrentGame().getMap().getLocation(4, 1) && DungeonHero.getPlayer().playerInventory[1].getQuantity() == 0)
                 {
@@ -143,6 +143,58 @@ public class GameMenuView extends View {
                     System.out.println("Congrats! You got the Enchanted Bow! It was said\n"
                             + "That this item was used to hunt down the ghosts the would\n"
                             + "haunt the castles of old.");
+                }else
+                {
+                    System.out.println("There is no bow to grab");
+                }
+                break;
+            case "GRAB BOMBS": 
+                if(DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(),DungeonHero.getPlayer().getActorCol()) == 
+                        DungeonHero.getCurrentGame().getMap().getLocation(0, 4) && DungeonHero.getPlayer().playerInventory[2].getQuantity() == 0)
+                {
+                    DungeonHero.getPlayer().playerInventory[2].setQuantity(1);
+                    System.out.println("Congrats! You got a bag of Bombs! What could \n"
+                            + "You do with these?");
+                }else
+                {
+                    System.out.println("There are no bombs to grab");
+                }
+                break;
+            case "GRAB GRAPPLING HOOK": 
+                if(DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(),DungeonHero.getPlayer().getActorCol()) == 
+                        DungeonHero.getCurrentGame().getMap().getLocation(4, 6) && DungeonHero.getPlayer().playerInventory[3].getQuantity() == 0)
+                {
+                    DungeonHero.getPlayer().playerInventory[3].setQuantity(1);
+                    System.out.println("Congrats! You got a Grappling Hook! You can now swing \n"
+                            + "across things");
+                }else
+                {
+                    System.out.println("There is no grappling hook to grab");
+                }
+                break;
+            case "GRAB HARP": 
+                if(DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(),DungeonHero.getPlayer().getActorCol()) == 
+                        DungeonHero.getCurrentGame().getMap().getLocation(0, 5) && DungeonHero.getPlayer().playerInventory[4].getQuantity() == 0)
+                {
+                    DungeonHero.getPlayer().playerInventory[4].setQuantity(1);
+                    System.out.println("Congrats! You got the Sacred Harp! This harp is a royal artifact!\n"
+                            + "What could it possibly be doing here?\n "
+                            + "It glows with a white light!");
+                }else
+                {
+                    System.out.println("There is no harp to grab");
+                }
+                break;
+            case "GRAB SWORD": 
+                if(DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(),DungeonHero.getPlayer().getActorCol()) == 
+                        DungeonHero.getCurrentGame().getMap().getLocation(4, 0) && DungeonHero.getPlayer().playerInventory[0].getQuantity() == 1)
+                {
+                    DungeonHero.getPlayer().playerInventory[0].setQuantity(2);
+                    System.out.println("Congrats! You got the Enchanted Sword! This Mythical blade was said\n"
+                            + "to have been forged by angels. Evil can not touch it!\n ");
+                }else
+                {
+                    System.out.println("There is no sword to grab");
                 }
                 break;
                 
