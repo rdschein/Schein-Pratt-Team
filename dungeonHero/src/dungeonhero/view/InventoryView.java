@@ -41,19 +41,19 @@ public class InventoryView extends View {
         {
             System.out.println("Enchanted Sword");
         }
-        if(DungeonHero.getPlayer().playerInventory[1].getQuantity() == 0)
+        if(DungeonHero.getPlayer().playerInventory[1].getQuantity() == 1)
         {
             System.out.println("Bow");
         }
-        if(DungeonHero.getPlayer().playerInventory[2].getQuantity() == 0)
+        if(DungeonHero.getPlayer().playerInventory[2].getQuantity() == 1)
         {
             System.out.println("Bombs");
         }
-        if(DungeonHero.getPlayer().playerInventory[3].getQuantity() == 0)
+        if(DungeonHero.getPlayer().playerInventory[3].getQuantity() == 1)
         {
             System.out.println("Grapple");
         }
-        if(DungeonHero.getPlayer().playerInventory[4].getQuantity() == 0)
+        if(DungeonHero.getPlayer().playerInventory[4].getQuantity() == 1)
         {
             System.out.println("Harp");
         }
