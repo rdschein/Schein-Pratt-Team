@@ -135,6 +135,16 @@ public class GameMenuView extends View {
                     System.out.print("You are not able to do that"); 
                 }
                 break;
+                case "grab bow": // creat new game
+                if(DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(),DungeonHero.getPlayer().getActorCol()) == 
+                        DungeonHero.getCurrentGame().getMap().getLocation(4, 1) && DungeonHero.getPlayer().playerInventory[1].getQuantity() == 0)
+                {
+                    DungeonHero.getPlayer().playerInventory[1].setQuantity(1);
+                    System.out.println("Congrats! You got the Enchanted Bow! It was said\n"
+                            + "That this item was used to hunt down the ghosts the would\n"
+                            + "haunt the castles of old.");
+                }
+                break;
                 
             default:
                 System.out.println("Invaild selection Try again");
