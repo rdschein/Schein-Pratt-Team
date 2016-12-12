@@ -260,6 +260,7 @@ public class GameMenuView extends View {
                 }
                 break;
                 case "USE GRAPPLING HOOK": // creat new game
+                if(DungeonHero.getCurrentGame().player.playerInventory[3].getQuantity() == 1){
                 if(DungeonHero.getCurrentGame().getMap().getLocation(1, 9) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
                         && DungeonHero.getCurrentGame().player.firePit1%2 != 0)
                 {
@@ -309,6 +310,11 @@ public class GameMenuView extends View {
                 {
                     System.out.println("You can not do that right now");
        
+                }
+                }else
+                {
+                    System.out.println("You don't have a grappling hook");
+                
                 }
                 break;
                 
