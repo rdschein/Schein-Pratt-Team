@@ -83,8 +83,10 @@ public class Scene implements Serializable{
     
     Scene finishScene = new Scene();
     finishScene.setDescription(
-            "You saved the Princess! You're a real Hero! Your name will echo"
-          + "throughout history and you will become a Legend!");// what should be in the scene
+            "*-------------------------------------------------------------------*\n"
+          + "You saved the Princess! You're a real Hero! Your name will echo"
+          + "throughout history and you will become a Legend!\n"
+          + "*-------------------------------------------------------------------*");// what should be in the scene
     finishScene.setMapSymbol("FN");
     finishScene.setBlockedLocation(false);
     scenes[SceneType.finish.ordinal()] = finishScene;
@@ -92,12 +94,13 @@ public class Scene implements Serializable{
     //location scenes
     Scene a1Scene = new Scene();
     a1Scene.setDescription(
-            "You enter the room triumphantly as many monsters "
+            "*------------------------------------------------------------------*\n"
+          + "You enter the room triumphantly as many monsters "
           + "have fallen before you, however, the real test awaits as the "
-          + "Boss of the dungeon emerges to stop you.\n "
-          + "This is your final obstacle!\n "
+          + "Boss of the dungeon emerges to stop you. This is your final obstacle!\n "
           + "When the Boss is defeated, the dungeon is cleared and you will "
-          + "be known as the Dungeon Hero!");// what should be in the scene
+          + "be known as the Dungeon Hero!\n"
+          + "*-------------------------------------------------------------------*");// what should be in the scene
     a1Scene.setMapSymbol(" A1 ");
     a1Scene.setBlockedLocation(false);
     scenes[SceneType.A1.ordinal()] = a1Scene;
@@ -108,10 +111,12 @@ public class Scene implements Serializable{
     
     Scene a2Scene = new Scene();
     a2Scene.setDescription(
-            "This room is empty.\n "
+            "*---------------------------------------------------------*\n"
+          + "This room is empty.\n "
           + "Make another choice in direction to continue\n"
           + "your journey through the dungeon!\n "
-          + "You notice doorways to the east and the south.");// what should be in the scene
+          + "You notice doorways to the east and the south.\n"
+          + "*---------------------------------------------------------*");// what should be in the scene
     a2Scene.setMapSymbol(" A2 ");
     a2Scene.setBlockedLocation(false);
     scenes[SceneType.A2.ordinal()] = a2Scene;
@@ -122,10 +127,12 @@ public class Scene implements Serializable{
     
     Scene a3Scene = new Scene();
     a3Scene.setDescription(
-            "This room is empty.\n "
+            "*---------------------------------------------------------*\n"
+          + "This room is empty.\n "
           + "Make another choice in direction to continue\n "
           + "your journey through the dungeon!\n "
-          + "You notice doorways to the east, south, and west.");
+          + "You notice doorways to the east, south, and west.\n"
+          + "*---------------------------------------------------------*");
     a3Scene.setMapSymbol(" A3 ");
     a3Scene.setBlockedLocation(false);
     scenes[SceneType.A3.ordinal()] = a3Scene;
@@ -136,11 +143,13 @@ public class Scene implements Serializable{
     
     Scene a4Scene = new Scene();
     a4Scene.setDescription(
-            "This room is empty.\n"
-          + " Make another choice in direction to continue your journey through the dungeon!\n"
-          + " You notice a crumbling wall that does not appear to be stable.\n"
-          + " Perhaps this path leads to another room...you also notice a\n "
-          + "doorway to the south and one to the west.");// what should be in the scene
+            "*-----------------------------------------------------------------------------*\n"
+          + "This room is empty.\n"
+          + "Make another choice in direction to continue your journey through the dungeon!\n"
+          + "You notice a crumbling wall that does not appear to be stable.\n"
+          + "perhaps this path leads to another room...you also notice a\n "
+          + "doorway to the south and one to the west.\n"
+          + "*-----------------------------------------------------------------------------*");// what should be in the scene
     a4Scene.setMapSymbol(" A4 ");
     a4Scene.setBlockedLocation(false);
     scenes[SceneType.A4.ordinal()] = a4Scene;
@@ -151,10 +160,12 @@ public class Scene implements Serializable{
     
     Scene a5Scene = new Scene();
     a5Scene.setDescription(
-            "You discover a stash of small bombs in this room!\n"
-          + " As you wonder what they could be used for you\n"
-          + " notice a crumbling wall that does not appear to be stable.\n"
-          + " Perhaps this path leads to another room…the only doorway is to the south.");// what should be in the scene
+            "*------------------------------------------------------------------------*\n"
+          + "You discover a stash of small bombs in this room!\n"
+          + "As you wonder what they could be used for you\n"
+          + "notice a crumbling wall that does not appear to be stable.\n"
+          + "Perhaps this path leads to another room…the only doorway is to the south.\n"
+          + "*------------------------------------------------------------------------*");// what should be in the scene
     a5Scene.setMapSymbol(" A5 ");
     a5Scene.setBlockedLocation(false);
     scenes[SceneType.A5.ordinal()] = a5Scene;
@@ -165,10 +176,12 @@ public class Scene implements Serializable{
     
     Scene a6Scene = new Scene();
     a6Scene.setDescription(
-            "You enter the room and discover a powerful artifact!\n"
-          + " The item is a magical harp that is said to be used\n"
-          + " to enhance an enchanted sword. The walls are solid around you!\n"
-          + " You will have to go back the way you came to the east.");// what should be in the scene
+            "*--------------------------------------------------------------*\n"
+          + "You enter the room and discover a powerful artifact!\n"
+          + "The item is a magical harp that is said to be used\n"
+          + "to enhance an enchanted sword. The walls are solid around you!\n"
+          + "You will have to go back the way you came to the east.\n"
+          + "*--------------------------------------------------------------*");// what should be in the scene
     a6Scene.setMapSymbol(" A6 ");
     a6Scene.setBlockedLocation(false);
     scenes[SceneType.A6.ordinal()] = a6Scene;
@@ -179,10 +192,12 @@ public class Scene implements Serializable{
     
     Scene a7Scene = new Scene();
     a7Scene.setDescription(
-            "You enter the room and are challenged by a Knight that guards the dungeon!\n"
-          + " You notice that there is a crumbling wall behind him.\n"
-          + " You wonder if he is guarding anything important through\n"
-          + " that wall…the only doorway is to the east.");// what should be in the scene
+            "*------------------------------------------------------------------------*\n"
+          + "You enter the room and are challenged by a Knight that guards the dungeon!\n"
+          + "You notice that there is a crumbling wall behind him.\n"
+          + "You wonder if he is guarding anything important through\n"
+          + "that wall…the only doorway is to the east.\n"
+          + "*------------------------------------------------------------------------*");// what should be in the scene
     a7Scene.setMapSymbol(" A7 ");
     a7Scene.setBlockedLocation(false);
     scenes[SceneType.A7.ordinal()] = a7Scene;
@@ -193,10 +208,12 @@ public class Scene implements Serializable{
     
     Scene a8Scene = new Scene();
     a8Scene.setDescription(
-            "This room is empty.\n"
-          + " Make another choice in direction to continue\n"
-          + " your journey through the dungeon!\n"
-          + " The only doorway is to the east.");// what should be in the scene
+            "*---------------------------------------------------------*\n"
+          + "This room is empty.\n"
+          + "Make another choice in direction to continue\n"
+          + "your journey through the dungeon!\n"
+          + "The only doorway is to the east.\n"
+          + "*---------------------------------------------------------*");// what should be in the scene
     a8Scene.setMapSymbol(" A8 ");
     a8Scene.setBlockedLocation(false);
     scenes[SceneType.A8.ordinal()] = a8Scene;
@@ -207,10 +224,12 @@ public class Scene implements Serializable{
     
     Scene a9Scene = new Scene();
     a9Scene.setDescription(
-            "This room is empty.\n"
-          + " Make another choice in direction to continue\n"
-          + " your journey through the dungeon!\n"
-          + " The only doorway is to the east.");// what should be in the scene
+            "*---------------------------------------------------------*\n"
+          + "This room is empty.\n"
+          + "Make another choice in direction to continue\n"
+          + "your journey through the dungeon!\n"
+          + "The only doorway is to the east.\n"
+          + "*---------------------------------------------------------*");// what should be in the scene
     a9Scene.setMapSymbol(" A9 ");
     a9Scene.setBlockedLocation(false);
     scenes[SceneType.A9.ordinal()] = a9Scene;
@@ -221,10 +240,12 @@ public class Scene implements Serializable{
     
     Scene a10Scene = new Scene();
     a10Scene.setDescription(
-            "This room is empty.\n"
-          + " Make another choice in direction to continue\n"
-          + " your journey through the dungeon!\n"
-          + " There is a doorway to the west and to the south where you came in.");// what should be in the scene
+            "*-------------------------------------------------------------------*\n"
+          + "This room is empty.\n"
+          + "Make another choice in direction to continue\n"
+          + "your journey through the dungeon!\n"
+          + "There is a doorway to the west and to the south where you came in.\n"
+          + "*-------------------------------------------------------------------*");// what should be in the scene
     a10Scene.setMapSymbol(" A0 ");
     a10Scene.setBlockedLocation(false);
     scenes[SceneType.A10.ordinal()] = a10Scene;
@@ -235,11 +256,13 @@ public class Scene implements Serializable{
     
     Scene b1Scene = new Scene();
     b1Scene.setDescription(
-            "As you enter the room you notice bones scattered along the floor...\n"
+            "*-------------------------------------------------------------------*\n"
+          + "As you enter the room you notice bones scattered along the floor...\n"
           + "Perhaps past adventurers who failed to defeat the dungeon monsters?\n"
-          + " Unfortunately, you are left with no time to think as the bones"
-          + " rise and form into a large skeleton monster!\n"
-          + " There are doorways to the north, south, and east.");// what should be in the scene
+          + "Unfortunately, you are left with no time to think as the bones"
+          + "rise and form into a large skeleton monster!\n"
+          + "There are doorways to the north, south, and east.\n"
+          + "*-------------------------------------------------------------------*");// what should be in the scene
     b1Scene.setMapSymbol(" b1 ");
     b1Scene.setBlockedLocation(false);
     scenes[SceneType.B1.ordinal()] = b1Scene;
@@ -250,9 +273,11 @@ public class Scene implements Serializable{
     
     Scene b2Scene = new Scene();
     b2Scene.setDescription(
-            "As you enter the room you notice the heat has increased drastically...\n"
+            "*-----------------------------------------------------------------------------*\n"
+          + "As you enter the room you notice the heat has increased drastically...\n"
           + "Watch your step! It appear that the dungeon is not only crawling"
-          + " with monsters but with fire traps too! There are doorways in every direction.");// what should be in the scene
+          + "with monsters but with fire traps too! There are doorways in every direction.\n"
+          + "*-----------------------------------------------------------------------------*");// what should be in the scene
     b2Scene.setMapSymbol(" B2 ");
     b2Scene.setBlockedLocation(false);
     scenes[SceneType.B2.ordinal()] = b2Scene;
@@ -263,10 +288,12 @@ public class Scene implements Serializable{
     
     Scene b3Scene = new Scene();
     b3Scene.setDescription(
-            "This room is empty.\n"
-          + " Make another choice in direction to continue"
-          + " your journey through the dungeon!\n"
-          + " There are doorways in every direction.");// what should be in the scene
+            "*---------------------------------------------------------*\n"
+          + "This room is empty.\n"
+          + "Make another choice in direction to continue"
+          + "your journey through the dungeon!\n"
+          + "There are doorways in every direction.\n"
+          + "*---------------------------------------------------------*");// what should be in the scene
     b3Scene.setMapSymbol(" B3 ");
     b3Scene.setBlockedLocation(false);
     scenes[SceneType.B3.ordinal()] = b3Scene;
@@ -277,10 +304,12 @@ public class Scene implements Serializable{
     
     Scene b4Scene = new Scene();
     b4Scene.setDescription(
-            "This room is empty.\n "
+            "*---------------------------------------------------------*\n"
+          + "This room is empty.\n "
           + "Make another choice in direction to continue"
-          + " your journey through the dungeon!\n"
-          + " There are doorways to the west, north, and south.");// what should be in the scene
+          + "your journey through the dungeon!\n"
+          + "There are doorways to the west, north, and south.\n"
+          + "*---------------------------------------------------------*");// what should be in the scene
     b4Scene.setMapSymbol(" b4 ");
     b4Scene.setBlockedLocation(false);
     scenes[SceneType.B4.ordinal()] = b4Scene;
@@ -291,10 +320,12 @@ public class Scene implements Serializable{
     
     Scene b5Scene = new Scene();
     b5Scene.setDescription(
-            "You enter the room and notice a glimmer on an old table.\n"
+            "*------------------------------------------------------------------------*\n"
+          + "You enter the room and notice a glimmer on an old table.\n"
           + "As you investigate you find that it is the master key to the dungeon!\n"
           + "This key enables the user access to all rooms of the dungeon.\n"
-          + "There are doorways to the north, south, and west");// what should be in the scene
+          + "There are doorways to the north, south, and west\n"
+          + "*------------------------------------------------------------------------*");// what should be in the scene
     b5Scene.setMapSymbol(" B5 ");
     b5Scene.setBlockedLocation(false);
     scenes[SceneType.B5.ordinal()] = b5Scene;
@@ -305,10 +336,12 @@ public class Scene implements Serializable{
     
     Scene b6Scene = new Scene();
     b6Scene.setDescription(
-            "This room is empty.\n"
+            "*---------------------------------------------------------*\n"
+          + "This room is empty.\n"
           + "Make another choice in direction to continue"
           + "your journey through the dungeon!\n"
-          + "There are doorways to the east and west.");// what should be in the scene
+          + "There are doorways to the east and west.\n"
+          + "*---------------------------------------------------------*");// what should be in the scene
     b6Scene.setMapSymbol(" b6 ");
     b6Scene.setBlockedLocation(false);
     scenes[SceneType.B6.ordinal()] = b6Scene;
@@ -319,10 +352,12 @@ public class Scene implements Serializable{
     
     Scene b7Scene = new Scene();
     b7Scene.setDescription(
-            "This room is empty.\n"
+            "*---------------------------------------------------------*\n"
+          + "This room is empty.\n"
           + "Make another choice in direction to continue"
           + "your journey through the dungeon!\n"
-          + "There are doorways to the east, west, and south.");// what should be in the scene
+          + "There are doorways to the east, west, and south.\n"
+          + "*---------------------------------------------------------*");// what should be in the scene
     b7Scene.setMapSymbol(" B7 ");
     b7Scene.setBlockedLocation(false);
     scenes[SceneType.B7.ordinal()] = b7Scene;
@@ -552,7 +587,7 @@ public class Scene implements Serializable{
     d1Scene.setCanGoNorth(true);
     d1Scene.setCanGoWest(false);
     d1Scene.setCanGoEast(false);
-    d1Scene.setCanGoSouth(true);
+    d1Scene.setCanGoSouth(false);
     
     Scene d2Scene = new Scene();
     d2Scene.setDescription(
