@@ -306,7 +306,7 @@ public class GameMenuView extends View {
        // key.setInventoryType("Key");
        // key.setQuantity(0);
        // key.setAmountRequired(1);
-     //   inventory[Item.key.ordinal()] = key;
+       // inventory[Item.key.ordinal()] = key;
     }
 
     public void displayMap() {
