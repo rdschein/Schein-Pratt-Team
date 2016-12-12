@@ -231,7 +231,7 @@ public class Scene implements Serializable{
     a10Scene.setCanGoNorth(false);
     a10Scene.setCanGoWest(false);
     a10Scene.setCanGoEast(false);
-    a10Scene.setCanGoSouth(false);
+    a10Scene.setCanGoSouth(true);
     
     Scene b1Scene = new Scene();
     b1Scene.setDescription(
@@ -369,7 +369,7 @@ public class Scene implements Serializable{
     b10Scene.setMapSymbol(" b0 ");
     b10Scene.setBlockedLocation(false);
     scenes[SceneType.B10.ordinal()] = b10Scene;
-    b10Scene.setCanGoNorth(false);
+    b10Scene.setCanGoNorth(true);
     b10Scene.setCanGoWest(false);
     b10Scene.setCanGoEast(false);
     b10Scene.setCanGoSouth(true);
