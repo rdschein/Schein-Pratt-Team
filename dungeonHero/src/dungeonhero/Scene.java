@@ -83,8 +83,10 @@ public class Scene implements Serializable{
     
     Scene finishScene = new Scene();
     finishScene.setDescription(
-            "You saved the Princess! You're a real Hero! Your name will echo"
-          + "throughout history and you will become a Legend!");// what should be in the scene
+            "*-------------------------------------------------------------------*\n"
+          + "You saved the Princess! You're a real Hero! Your name will echo"
+          + "throughout history and you will become a Legend!\n"
+          + "*-------------------------------------------------------------------*");// what should be in the scene
     finishScene.setMapSymbol("FN");
     finishScene.setBlockedLocation(false);
     scenes[SceneType.finish.ordinal()] = finishScene;
