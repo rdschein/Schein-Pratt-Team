@@ -128,6 +128,12 @@ public class StartProgramView extends View {
                          + "\nperilous place a shiver runs down your spine. You can hear whispers"
                          + "\ninside. You draw your sword. With one last deep breath, you enter  "
                          +"\nthe Dungeon."
+                         + "\nYou enter the Dungeon. Once inside the whispering stops and is replaced"
+                         + "\nwith an eerie silence."
+                         + "\n"
+                         + "\nThe Entrance Hall is large and filled with grotesque statues of monsters"
+                         + "\nbattling men. As you walk around the frozen battlefield you notice a door"
+                         + "\nto the north as well as door to the west."
                          + "\n=====================================================================" );
     
         //Ceate MainMenuView object

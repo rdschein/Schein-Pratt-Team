@@ -733,9 +733,6 @@ public class Scene implements Serializable{
     Scene e5Scene = new Scene();
     e5Scene.setDescription(
                      "*---------------------------------------------------------\n*"
-                   + "You enter the Dungeon. Once inside the whispering "
-                   + "stops and is replaced\n"
-                   + "with an eerie silence\n. "
                    + "The Entrance Hall is large and\n "
                    + "filled with grotesque statues of\n "
                    + "monsters battling men.\n "

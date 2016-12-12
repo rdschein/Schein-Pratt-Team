@@ -34,7 +34,8 @@ public class GameMenuView extends View {
                   + "\nA-Type Action                    "
                   + "\nH-Help                           "
                   + "\nQ-Exit to Main Menu"
-                  + "\n---------------------------------");
+                  + "\n---------------------------------"
+                  + "\nYOU ARE CURRENT LOCATED AT:"+DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol()).scene.getMapSymbol());
  }
 @Override
     public boolean doAction(String choice) {
@@ -56,12 +57,13 @@ public class GameMenuView extends View {
                     "A-Type Action                    \n" +
                     "H-Help                           \n" +
                     "Q-Exit to Main Menu\n" +
-                    "---------------------------------");
+                    "\n---------------------------------" +
+                    "\nYOU ARE CURRENT LOCATED AT:"+DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol()).scene.getMapSymbol());
                 break;
-            case "A":
-                ActionInputView action = new ActionInputView();
-                action.display();
-                break;
+//            case "A":
+//                ActionInputView action = new ActionInputView();
+//                action.display();
+//                break;
             case "H":
                 HelpMenuView help = new HelpMenuView();
                 help.display();
@@ -197,6 +199,66 @@ public class GameMenuView extends View {
                     System.out.println("There is no sword to grab");
                 }
                 break;
+            case "USE BOMBS ON WALLS":
+                
+                if(DungeonHero.getCurrentGame().player.playerInventory[2].getQuantity() == 1){
+                
+                if(DungeonHero.getCurrentGame().getMap().getLocation(0, 4) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().map.getLocation(0, 4).getScene().isCanGoWest() == false)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(0, 4).getScene().setCanGoWest(true);
+                    
+                    System.out.println("The weak wall to the west colapsed! You can now contine to travel west if you like.");
+                
+                
+                }else if(DungeonHero.getCurrentGame().getMap().getLocation(3, 2) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().map.getLocation(3, 2).getScene().isCanGoSouth() == false)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(3, 2).getScene().setCanGoSouth(true);
+                    
+                    System.out.println("The weak wall to the south colapsed! You can now contine to travel west if you like.");
+                
+                }else if(DungeonHero.getCurrentGame().getMap().getLocation(2, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().map.getLocation(2, 0).getScene().isCanGoSouth() == false)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(2, 0).getScene().setCanGoSouth(true);
+                    
+                    System.out.println("The weak wall to the south colapsed! You can now contine to travel west if you like.");
+                
+                }else if(DungeonHero.getCurrentGame().getMap().getLocation(3, 2) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().map.getLocation(3, 2).getScene().isCanGoSouth() == false)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(3, 2).getScene().setCanGoSouth(true);
+                    
+                    System.out.println("The weak wall to the south colapsed! You can now contine to travel west if you like.");
+                
+                }else if(DungeonHero.getCurrentGame().getMap().getLocation(0, 6) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().map.getLocation(0, 6).getScene().isCanGoWest() == false)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(0, 6).getScene().setCanGoWest(true);
+                    
+                    System.out.println("The weak wall to the west colapsed! You can now contine to travel west if you like.");
+                
+                
+                }else if(DungeonHero.getCurrentGame().getMap().getLocation(3, 8) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().map.getLocation(3, 8).getScene().isCanGoEast() == false)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(3, 8).getScene().setCanGoEast(true);
+                    
+                    System.out.println("The weak wall to the east colapsed! You can now contine to travel west if you like.");
+                
+                }else
+                {
+                    System.out.println("Your Bombs had no effect");
+                
+                }
+                
+                
+                }else
+                {
+                    System.out.println("You don't have any bombs to use");
+                }
+                break;
                 
             default:
                 System.out.println("Invaild selection Try again");
@@ -296,7 +358,8 @@ public class GameMenuView extends View {
             "A-Type Action                    \n" +
             "H-Help                           \n" +
             "Q-Exit to Main Menu\n" +
-            "---------------------------------");
+            "\n---------------------------------" +
+            "\nYOU ARE CURRENT LOCATED AT:"+DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol()).scene.getMapSymbol());
    }
 }
        

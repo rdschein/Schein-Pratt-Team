@@ -34,12 +34,5 @@ public enum Enemies implements Serializable {
     public Point getCoordinates() {
         return coordinates;
     }
-
-   
-
-    
-    
-    
-    
     
 }
