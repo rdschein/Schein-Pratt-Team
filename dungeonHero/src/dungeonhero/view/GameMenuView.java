@@ -121,7 +121,7 @@ public class GameMenuView extends View {
                 }
                 break;
             case "GO EAST":
-                 Point newLoc4 = new Point();
+                Point newLoc4 = new Point();
                 newLoc4.x = DungeonHero.getPlayer().getActorRow();
                 newLoc4.y = DungeonHero.getPlayer().getActorCol()+1;
                 
