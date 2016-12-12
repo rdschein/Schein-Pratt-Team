@@ -259,6 +259,20 @@ public class GameMenuView extends View {
                     System.out.println("You don't have any bombs to use");
                 }
                 break;
+                case "USE GRAPPLING HOOK": // creat new game
+                if(DungeonHero.getCurrentGame().getMap().getLocation(1, 9) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().player.firePit1%2 != 0)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(1, 9).getScene().setCanGoSouth(false);
+                    DungeonHero.getCurrentGame().map.getLocation(1, 9).getScene().setCanGoNorth(true);
+                    
+                    DungeonHero.getCurrentGame().player.setFirePit1(DungeonHero.getCurrentGame().player.getFirePit1()+1);
+                    
+                    System.out.println("You swung across the fire pit with your grappling hook. You are\n"
+                            + "on the north side of the room now. You can now continue your path north");
+                
+                }
+                break;
                 
             default:
                 System.out.println("Invaild selection Try again");
