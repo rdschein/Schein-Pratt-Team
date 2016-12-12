@@ -146,7 +146,7 @@ public class Scene implements Serializable{
     scenes[SceneType.A4.ordinal()] = a4Scene;
     a4Scene.setCanGoNorth(false);
     a4Scene.setCanGoWest(true);
-    a4Scene.setCanGoEast(false);
+    a4Scene.setCanGoEast(true);
     a4Scene.setCanGoSouth(true);
     
     Scene a5Scene = new Scene();
@@ -174,7 +174,7 @@ public class Scene implements Serializable{
     scenes[SceneType.A6.ordinal()] = a6Scene;
     a6Scene.setCanGoNorth(false);
     a6Scene.setCanGoWest(false);
-    a6Scene.setCanGoEast(false);
+    a6Scene.setCanGoEast(true);
     a6Scene.setCanGoSouth(false);
     
     Scene a7Scene = new Scene();
@@ -658,7 +658,7 @@ public class Scene implements Serializable{
     d10Scene.setBlockedLocation(false);
     scenes[SceneType.D10.ordinal()] = d10Scene;
     d10Scene.setCanGoNorth(true);
-    d10Scene.setCanGoWest(false);
+    d10Scene.setCanGoWest(true);
     d10Scene.setCanGoEast(false);
     d10Scene.setCanGoSouth(true);
     
@@ -709,7 +709,7 @@ public class Scene implements Serializable{
     e3Scene.setMapSymbol(" e3 ");
     e3Scene.setBlockedLocation(false);
     scenes[SceneType.E3.ordinal()] = e3Scene;
-    e3Scene.setCanGoNorth(false);
+    e3Scene.setCanGoNorth(true);
     e3Scene.setCanGoWest(true);
     e3Scene.setCanGoEast(false);
     e3Scene.setCanGoSouth(false);
