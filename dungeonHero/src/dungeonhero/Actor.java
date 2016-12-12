@@ -22,6 +22,24 @@ public class Actor implements Serializable {
     private int gameOverCount;
     public boolean hasBow;
     public Items[] playerInventory;
+    public int firePit1;
+    public int firePit2;
+
+    public int getFirePit1() {
+        return firePit1;
+    }
+
+    public void setFirePit1(int firePit1) {
+        this.firePit1 = firePit1;
+    }
+
+    public int getFirePit2() {
+        return firePit2;
+    }
+
+    public void setFirePit2(int firePit2) {
+        this.firePit2 = firePit2;
+    }
 
     public Items[] getPlayerInventory() {
         return playerInventory;
