@@ -201,7 +201,7 @@ public class Scene implements Serializable{
     a8Scene.setBlockedLocation(false);
     scenes[SceneType.A8.ordinal()] = a8Scene;
     a8Scene.setCanGoNorth(false);
-    a8Scene.setCanGoWest(false);
+    a8Scene.setCanGoWest(true);
     a8Scene.setCanGoEast(true);
     a8Scene.setCanGoSouth(false);
     
@@ -215,7 +215,7 @@ public class Scene implements Serializable{
     a9Scene.setBlockedLocation(false);
     scenes[SceneType.A9.ordinal()] = a9Scene;
     a9Scene.setCanGoNorth(false);
-    a9Scene.setCanGoWest(false);
+    a9Scene.setCanGoWest(true);
     a9Scene.setCanGoEast(true);
     a9Scene.setCanGoSouth(false);
     
@@ -229,7 +229,7 @@ public class Scene implements Serializable{
     a10Scene.setBlockedLocation(false);
     scenes[SceneType.A10.ordinal()] = a10Scene;
     a10Scene.setCanGoNorth(false);
-    a10Scene.setCanGoWest(false);
+    a10Scene.setCanGoWest(true);
     a10Scene.setCanGoEast(false);
     a10Scene.setCanGoSouth(true);
     
@@ -500,10 +500,12 @@ public class Scene implements Serializable{
     
     Scene c10Scene = new Scene();
     c10Scene.setDescription(
-            "This room is empty.\n"
-          + " Make another choice in direction to continue"
-          + " your journey through the dungeon!\n"
-          + " There are doorways to the north and the south where you came in.");// what should be in the scene
+            "*-------------------------------------------------------------------*\n"
+          + "This room is empty.\n"
+          + "Make another choice in direction to continue"
+          + "your journey through the dungeon!\n"
+          + "There are doorways to the north and the south where you came in.\n"
+          + "*-------------------------------------------------------------------*");// what should be in the scene
     c10Scene.setMapSymbol(" c0 ");
     c10Scene.setBlockedLocation(false);
     scenes[SceneType.C10.ordinal()] = c10Scene;
@@ -514,10 +516,12 @@ public class Scene implements Serializable{
     
     Scene d1Scene = new Scene();
     d1Scene.setDescription(
-            "You look as though you’ve seen a ghost...Oh wait...you have!\n"
-          + " A ghost appears in the room but not only that, there is also a pit of fire!\n"
-          + " There is only one other doorway in this room. Do you fight or flee to safety?\n"
-          + " Watch your step if you choose to fight off the ghost! There is a doorway to the south.");// what should be in the scene
+            "*---------------------------------------------------------------------------------------*\n"
+          + "You look as though you’ve seen a ghost...Oh wait...you have!\n"
+          + "A ghost appears in the room but not only that, there is also a pit of fire!\n"
+          + "There is only one other doorway in this room. Do you fight or flee to safety?\n"
+          + "Watch your step if you choose to fight off the ghost! There is a doorway to the south.\n"
+          + "*---------------------------------------------------------------------------------------*");// what should be in the scene
     d1Scene.setMapSymbol(" d1 ");
     d1Scene.setBlockedLocation(false);
     scenes[SceneType.D1.ordinal()] = d1Scene;
