@@ -587,7 +587,7 @@ public class Scene implements Serializable{
     d1Scene.setCanGoNorth(true);
     d1Scene.setCanGoWest(false);
     d1Scene.setCanGoEast(false);
-    d1Scene.setCanGoSouth(true);
+    d1Scene.setCanGoSouth(false);
     
     Scene d2Scene = new Scene();
     d2Scene.setDescription(
