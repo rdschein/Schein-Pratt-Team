@@ -271,6 +271,44 @@ public class GameMenuView extends View {
                     System.out.println("You swung across the fire pit with your grappling hook. You are\n"
                             + "on the north side of the room now. You can now continue your path north");
                 
+                }else if(DungeonHero.getCurrentGame().getMap().getLocation(1, 9) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().player.firePit1%2 == 0)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(1, 9).getScene().setCanGoSouth(true);
+                    DungeonHero.getCurrentGame().map.getLocation(1, 9).getScene().setCanGoNorth(false);
+                    
+                    DungeonHero.getCurrentGame().player.setFirePit1(DungeonHero.getCurrentGame().player.getFirePit1()+1);
+                    
+                    System.out.println("You swung across the fire pit with your grappling hook. You are\n"
+                            + "on the south side of the room now. You can now continue your path south");
+                
+                }else if(DungeonHero.getCurrentGame().getMap().getLocation(3, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().player.firePit2%2 != 0)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(3, 0).getScene().setCanGoSouth(true);
+                    DungeonHero.getCurrentGame().map.getLocation(3, 0).getScene().setCanGoNorth(false);
+                    
+                    DungeonHero.getCurrentGame().player.setFirePit2(DungeonHero.getCurrentGame().player.getFirePit2()+1);
+                    
+                    System.out.println("You swung across the fire pit with your grappling hook. You are\n"
+                            + "on the south side of the room now. You can now continue your path south");
+                
+                }else if(DungeonHero.getCurrentGame().getMap().getLocation(3, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().player.firePit2%2 == 0)
+                {
+                    DungeonHero.getCurrentGame().map.getLocation(3, 0).getScene().setCanGoSouth(false);
+                    DungeonHero.getCurrentGame().map.getLocation(3, 0).getScene().setCanGoNorth(true);
+                    
+                    DungeonHero.getCurrentGame().player.setFirePit2(DungeonHero.getCurrentGame().player.getFirePit2()+1);
+                    
+                    System.out.println("You swung across the fire pit with your grappling hook. You are\n"
+                            + "on the north side of the room now. You can now continue your path north");
+                
+                }
+                else
+                {
+                    System.out.println("You can not do that right now");
+       
                 }
                 break;
                 
