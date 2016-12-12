@@ -720,15 +720,12 @@ public class Scene implements Serializable{
     
     Scene e5Scene = new Scene();
     e5Scene.setDescription(
-                     "You enter the Dungeon. Once inside the whispering "
-                   + "stops and is replaced\n"
-                   + "with an eerie silence\n. "
-                   + "The Entrance Hall is large and\n "
+                    " The Entrance Hall is large and\n "
                    + "filled with grotesque statues of\n "
                    + "monsters battling men.\n "
                    + "As you walk around the frozen battlefield you\n "
                    + "notice a door to the north as\n"
-                   + "well as a door to the west.");
+                   + " well as a door to the west.");
     e5Scene.setMapSymbol(" e5 ");
     e5Scene.setBlockedLocation(false);
     scenes[SceneType.E5.ordinal()] = e5Scene;
