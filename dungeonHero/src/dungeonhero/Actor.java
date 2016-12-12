@@ -78,6 +78,8 @@ public class Actor implements Serializable {
         actorCol = 4;
         hasBow = false;
         playerInventory = GameControl.createInventoryList();
+        firePit1 = 1;
+        firePit2 = 1;
     }
     
     
