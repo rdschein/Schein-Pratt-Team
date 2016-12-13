@@ -5,6 +5,9 @@
  */
 package dungeonhero.view;
 
+import dungeonhero.DungeonHero;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -14,6 +17,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
     
     protected String displayMessage;
+    
+    protected final BufferedReader keyboard = DungeonHero.getInFile();
+    protected final PrintWriter console = DungeonHero.getOutFile();
     
     public View(){}
     
@@ -45,24 +51,25 @@ public abstract class View implements ViewInterface {
     
     @Override
     public String getInput() {
-       Scanner keyboard = new Scanner(System.in); // get from keyboard
-       String value ="";// returned name
+        // get from keyboard
+       String value = null;// returned name
        boolean valid = false;
-       
-       while(!valid){
-           System.out.println("\nENTER COMMAND HERE:");
+       try {
+           while(!valid){
+               System.out.println("\nENTER COMMAND HERE:");
            
-           value = keyboard.nextLine();
-           value = value.trim();
+                value = this.keyboard.readLine();
+                value = value.trim();
            
-           if(value.length()<1){
-               System.out.println("\nInvalid value: value can not be blank");
-               continue;
-           }
-       
-           break; // end loop
-       }
-       return value;
+                if(value.length()<1){
+                    System.out.println("\nInvalid value: value can not be blank");
+                    continue;
+                }
+                break; // end loop
+            }
+       } catch (Exception e) {
+            System.out.println("Error reading input: " + e.getMessage());
+        }
+     return value;
     }
-     
 }
