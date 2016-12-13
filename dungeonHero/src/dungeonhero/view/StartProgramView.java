@@ -68,11 +68,11 @@ public class StartProgramView extends View {
 
     private String getPlayerName() throws IOException {
        //Scanner keyboard = new Scanner(System.in); // get from keyboard
-       String value ="";// returned name
+       String value = null;// returned name
        boolean valid = false;
        
        while(!valid){
-           System.out.println("\n"+this.promptMessage);
+           this.console.println("\n"+this.promptMessage);
            
            value = this.keyboard.readLine();
            value = value.trim();
