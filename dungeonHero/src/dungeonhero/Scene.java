@@ -147,7 +147,7 @@ public class Scene implements Serializable{
           + "This room is empty.\n"
           + "Make another choice in direction to continue your journey through the dungeon!\n"
           + "You notice a crumbling wall that does not appear to be stable.\n"
-          + "perhaps this path leads to another room...you also notice a\n "
+          + "perhaps this path leads to another room...you also notice a\n"
           + "doorway to the south and one to the west.\n"
           + "*-----------------------------------------------------------------------------*");// what should be in the scene
     a4Scene.setMapSymbol(" A4 ");
