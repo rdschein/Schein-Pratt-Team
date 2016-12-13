@@ -98,7 +98,7 @@ public class Scene implements Serializable{
           + "You enter the room triumphantly as many monsters "
           + "have fallen before you, however, the real test awaits as the "
           + "Boss of the dungeon emerges to stop you. This is your final obstacle!\n "
-          + "When the Boss is defeated, the dungeon is cleared and you will "
+          + "When the Boss is defeated, the dungeon is cleared and you will\n"
           + "be known as the Dungeon Hero!\n"
           + "*-------------------------------------------------------------------*");// what should be in the scene
     a1Scene.setMapSymbol(" A1 ");
@@ -816,7 +816,7 @@ public class Scene implements Serializable{
                    + "monsters battling men.\n "
                    + "As you walk around the frozen battlefield you\n "
                    + "notice a door to the north as\n"
-                   + "well as a door to the west."
+                   + "well as a door to the west.\n"
                    + "*---------------------------------------------------------*");
     e5Scene.setMapSymbol(" e5 ");
     e5Scene.setBlockedLocation(false);
