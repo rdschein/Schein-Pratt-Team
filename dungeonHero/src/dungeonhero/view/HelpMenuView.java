@@ -68,7 +68,7 @@ public class HelpMenuView extends View {
                 break;
             case "L":
                 System.out.println("Items have various usages in Dungeon Hero.\n"
-                        + " You have a supply of items and weapons that will be\n"
+                        + "You have a supply of items and weapons that will be\n"
                         + "used throughout the dungeon to win the game. Items to\n"
                         + "help you will need to be acquired. The bombs can be\n"
                         + "used to destroy crumbling walls and the grappling hook\n"
@@ -85,13 +85,13 @@ public class HelpMenuView extends View {
                 break;
             case "A":
                 System.out.println("Attacking is important to the game as well.\n"
-                        + " You can’t beat the game without fighting off the\n"
-                        + " monsters after all! When you enter a new room,\n"
-                        + " a description pops up explaining to you what is in the room.\n"
-                        + " If a monster appears you have the option to attack.\n"
-                        + " Not all monsters are weak to the same weapon!!! A floating\n"
-                        + " monster such as a ghost may not be able to be defeats with a sword!\n"
-                        + " To attack you can use the following commands:\n\n"
+                        + "You can’t beat the game without fighting off the\n"
+                        + "monsters after all! When you enter a new room,\n"
+                        + "a description pops up explaining to you what is in the room.\n"
+                        + "If a monster appears you have the option to attack.\n"
+                        + "Not all monsters are weak to the same weapon!!! A floating\n"
+                        + "monster such as a ghost may not be able to be defeats with a sword!\n"
+                        + "To attack you can use the following commands:\n\n"
                         + "Attack With Sword: use sword\n"
                         + "Attack With Bow: use bow");
                 break;
