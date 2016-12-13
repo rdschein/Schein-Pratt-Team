@@ -111,7 +111,7 @@ public class GameMenuView extends View {
                 this.displayMap();
                 }else
                 {
-                System.out.print("You are not able to do that");
+               this.console.println("You are not able to do that");
                 }
                 break;
             case "GO WEST":

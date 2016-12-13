@@ -7,6 +7,7 @@ package dungeonhero.view;
 
 import dungeonhero.Actor;
 import dungeonhero.control.GameControl;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -27,7 +28,7 @@ public class StartProgramView extends View {
         this.displayBanner();
        
     }
-    public void displayStartProgramView()
+    public void displayStartProgramView() throws IOException
     {
         // Print the Banner page with short discription
         
@@ -65,15 +66,15 @@ public class StartProgramView extends View {
      );    //To change body of generated methods, choose Tools | Templates.
     }
 
-    private String getPlayerName() {
-       Scanner keyboard = new Scanner(System.in); // get from keyboard
+    private String getPlayerName() throws IOException {
+       //Scanner keyboard = new Scanner(System.in); // get from keyboard
        String value ="";// returned name
        boolean valid = false;
        
        while(!valid){
            System.out.println("\n"+this.promptMessage);
            
-           value = keyboard.nextLine();
+           value = this.keyboard.readLine();
            value = value.trim();
            
            if(value.length()<1){

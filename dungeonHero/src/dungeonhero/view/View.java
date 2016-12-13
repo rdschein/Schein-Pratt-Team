@@ -52,7 +52,7 @@ public abstract class View implements ViewInterface {
     @Override
     public String getInput() {
         // get from keyboard
-       String value = null;// returned name
+       String value = "";// returned name
        boolean valid = false;
        try {
            while(!valid){

@@ -79,7 +79,7 @@ public class DungeonHero {
         String filePath = "log.txt";
         DungeonHero.logFile = new PrintWriter(filePath);
         
-        }catch(Throwable e){
+        }catch(Exception e){
             System.out.println("Exception:" + e.toString() + "\nCause: "+ e.getCause() + "\nMessage: " + e.getMessage());
             
             e.printStackTrace();;
