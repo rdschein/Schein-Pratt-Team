@@ -22,6 +22,7 @@ public class MainMenuView extends View {
                   + "\n---------------------------------"
                   + "\nN-New Game"
                   + "\nL-Load an existing game"
+                  + "\nS-Save Game"
                   + "\nE-Exit"
                   + "\nH-Help"
                   + "\n---------------------------------");
@@ -36,7 +37,10 @@ public class MainMenuView extends View {
                 this.startNewGame();
                 break;
             case "L":
-                this.startExisitingGame();
+                this.startSavedGame();
+                break;
+            case "S":
+                this.saveGame();
                 break;
             case "H":
                 this.displayHelpMenu();
@@ -57,12 +61,37 @@ public class MainMenuView extends View {
         gameMenu.display();
     }
 
-    private void startExisitingGame() {
-        System.out.println("startExistingGame called");
-    }
-
     private void displayHelpMenu() {
        HelpMenuView helpMenu = new HelpMenuView();
        helpMenu.display();
+    }
+    
+    private void startSavedGame() {
+        this.console.println("\n\nEnter the file path for file where the game is to be saved");
+        
+        String filePath = this.getInput();
+        
+        try{
+            GameControl.getSavedGame(filePath);
+        }catch (Exception ex){
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    }
+    
+    private void saveGame() {
+        this.console.println("\n\nEnter the file path for file where the game is to be saved");
+        
+        String filePath = this.getInput();
+        
+        try{
+            GameControl.saveGame(DungeonHero.getCurrentGame(), filePath);
+        }catch(Exception ex)
+        {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        
+        }
     }
 }

@@ -13,6 +13,11 @@ import dungeonhero.Items;
 import dungeonhero.Location;
 import dungeonhero.Map;
 import dungeonhero.Scene;
+import dungeonhero.exceptions.GameControlException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 //import dungeonhero.control.LocationControl;
 
@@ -161,6 +166,33 @@ public class GameControl {
         locations[4][7].setScene(scenes[Scene.SceneType.E8.ordinal()]);
         locations[4][8].setScene(scenes[Scene.SceneType.E9.ordinal()]);
         locations[4][9].setScene(scenes[Scene.SceneType.E10.ordinal()]);
+    }
+
+    public static void saveGame(Game game, String filePath) 
+        throws GameControlException{
+        
+        try( FileOutputStream fops = new FileOutputStream(filePath))
+        {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(game);
+        }catch(Exception e)
+        {
+            throw new GameControlException(e.getMessage());
+        }
+    }
+
+    public static void getSavedGame(String filePath) throws GameControlException {
+       Game game = null;
+       
+       try( FileInputStream fips = new FileInputStream(filePath)){
+           ObjectInputStream input = new ObjectInputStream(fips);
+           
+           game = (Game) input.readObject();
+       }
+       catch(Exception e){
+           throw new GameControlException(e.getMessage());
+       }
     }
 
     private static class health {
