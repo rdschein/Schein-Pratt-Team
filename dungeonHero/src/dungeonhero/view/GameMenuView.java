@@ -208,6 +208,11 @@ public class GameMenuView extends View {
                 {
                     DungeonHero.getCurrentGame().map.getLocation(0, 4).getScene().setCanGoWest(true);
                     
+                    DungeonHero.getCurrentGame().getMap().getLocation(0, 4).getScene().setDescription(
+                            "*------------------------------------------------------------------------*\n"
+          + "There is a door to the south and a hole to the west"
+          + "*------------------------------------------------------------------------*");
+                    
                     System.out.println("The weak wall to the west colapsed! You can now contine to travel west if you like.");
                 
                 
@@ -215,6 +220,7 @@ public class GameMenuView extends View {
                         && DungeonHero.getCurrentGame().map.getLocation(3, 2).getScene().isCanGoSouth() == false)
                 {
                     DungeonHero.getCurrentGame().map.getLocation(3, 2).getScene().setCanGoSouth(true);
+                    
                     
                     System.out.println("The weak wall to the south colapsed! You can now contine to travel west if you like.");
                 
