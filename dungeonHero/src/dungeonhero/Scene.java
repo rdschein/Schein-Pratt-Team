@@ -196,7 +196,7 @@ public class Scene implements Serializable{
           + "You enter the room and are challenged by a Knight that guards the dungeon!\n"
           + "You notice that there is a crumbling wall behind him.\n"
           + "You wonder if he is guarding anything important through\n"
-          + "that wall…the only doorway is to the east.\n"
+          + "the only doorway is to the east.\n"
           + "*------------------------------------------------------------------------*");// what should be in the scene
     a7Scene.setMapSymbol(" A7 ");
     a7Scene.setBlockedLocation(false);
