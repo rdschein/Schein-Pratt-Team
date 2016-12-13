@@ -12,6 +12,7 @@ import dungeonhero.Actor;
 import static dungeonhero.Scene.createScenes;
 import dungeonhero.exceptions.LocationControlException;
 import java.awt.Point;
+import java.util.Scanner;
 
 /**
  *
@@ -41,7 +42,7 @@ public class LocationControl {
         
         
     }
-    public static void moveCharacterToNewLoc(Actor character ,Point coordinates, Location[][] locations )
+    public static void moveCharacterToNewLoc(Actor character ,Point coordinates, Location[][] locations ) throws LocationControlException
     {
         if(character == null)
         {
@@ -57,7 +58,7 @@ public class LocationControl {
                 coordinates.y < 0 ||
                 coordinates.y > 10)
         {
-        System.out.println("The problem is with the coordinates");
+        throw new LocationControlException("Error: new Locations are out of bounds");
         }
       
         Location oldLocation = locations[character.getActorRow()][character.getActorCol()]; // testing
@@ -106,7 +107,25 @@ public class LocationControl {
     public int getRandomRow(int row) throws LocationControlException {
         // Rob wrote this function
         
-        row = row + 3;
+       Scanner keyboard = new Scanner(System.in); // get from keyboard
+       String value ="";// returned name
+       boolean valid = false;
+       
+       while(!valid){
+           System.out.println("\nPlease enter a number between 1&5");
+           
+           value = keyboard.nextLine();
+           value = value.trim();
+           
+           if(value.equals("Q"))
+               break;
+            try{   
+            row = Integer.parseInt(value);
+            }catch(NumberFormatException nf)
+            {
+                System.out.println("\nYou must enter a vaild number. Try again");
+            }
+       }
         
         while (row > 5) {
             row = row - 5;
@@ -122,6 +141,7 @@ public class LocationControl {
        
         return row;
     }
+    
     
     public int getRandomCol(int col) {
         // Dylan wrote this function

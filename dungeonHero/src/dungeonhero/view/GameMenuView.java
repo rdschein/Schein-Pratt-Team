@@ -13,11 +13,14 @@ import dungeonhero.Map;
 import dungeonhero.Actor;
 import dungeonhero.control.GameControl;
 import static dungeonhero.control.LocationControl.moveCharacterToNewLoc;
+import dungeonhero.exceptions.LocationControlException;
 import java.util.Scanner;
 import dungeonhero.view.MainMenuView;
 import dungeonhero.view.InventoryView;
 import dungeonhero.view.TheBossBattle;
 import java.awt.Point;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
  // @author Dylan
 public class GameMenuView extends View {
@@ -75,7 +78,11 @@ public class GameMenuView extends View {
                 newLoc.y = DungeonHero.getPlayer().getActorCol();
                 if(DungeonHero.getCurrentGame().getMap().getLocation(newLoc.x+1, newLoc.y).getScene().isCanGoNorth() == true){
             
+            try {
                 moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc, DungeonHero.getCurrentGame().getMap().getLocations());
+            } catch (LocationControlException ex) {
+                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
                 DungeonHero.getCurrentGame().map.visitLocation(newLoc.x, newLoc.y);
                 
                 System.out.println(DungeonHero.getCurrentGame().getMap().getLocation(newLoc.x, newLoc.y).getScene().getDescription());
@@ -92,7 +99,11 @@ public class GameMenuView extends View {
                 newLoc2.y = DungeonHero.getPlayer().getActorCol();
             
                 if(DungeonHero.getCurrentGame().getMap().getLocation(newLoc2.x-1, newLoc2.y).getScene().isCanGoSouth() == true){
+            try {
                 moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc2, DungeonHero.getCurrentGame().getMap().getLocations());
+            } catch (LocationControlException ex) {
+                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
                 DungeonHero.getCurrentGame().map.visitLocation(newLoc2.x, newLoc2.y);
                 
                 System.out.println(DungeonHero.getCurrentGame().getMap().getLocation(newLoc2.x, newLoc2.y).getScene().getDescription());
@@ -109,7 +120,11 @@ public class GameMenuView extends View {
                 newLoc3.y = DungeonHero.getPlayer().getActorCol()-1;
             
                 if(DungeonHero.getCurrentGame().getMap().getLocation(newLoc3.x, newLoc3.y+1).getScene().isCanGoWest() == true){
+            try {
                 moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc3, DungeonHero.getCurrentGame().getMap().getLocations());
+            } catch (LocationControlException ex) {
+                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
                 DungeonHero.getCurrentGame().map.visitLocation(newLoc3.x, newLoc3.y);
                 
                 System.out.println(DungeonHero.getCurrentGame().getMap().getLocation(newLoc3.x, newLoc3.y).getScene().getDescription());
@@ -126,7 +141,11 @@ public class GameMenuView extends View {
                 newLoc4.y = DungeonHero.getPlayer().getActorCol()+1;
                 
                 if(DungeonHero.getCurrentGame().getMap().getLocation(newLoc4.x, newLoc4.y-1).getScene().isCanGoEast() == true){
+            try {
                 moveCharacterToNewLoc(DungeonHero.getPlayer() ,newLoc4, DungeonHero.getCurrentGame().getMap().getLocations());
+            } catch (LocationControlException ex) {
+                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
                 DungeonHero.getCurrentGame().map.visitLocation(newLoc4.x, newLoc4.y);
                 
                 System.out.println(DungeonHero.getCurrentGame().getMap().getLocation(newLoc4.x, newLoc4.y).getScene().getDescription());// displays the scene
@@ -210,8 +229,8 @@ public class GameMenuView extends View {
                     
                     DungeonHero.getCurrentGame().getMap().getLocation(0, 4).getScene().setDescription(
                             "*------------------------------------------------------------------------*\n"
-          + "There is a door to the south and a hole to the west"
-          + "*------------------------------------------------------------------------*");
+                            + "There is a door to the south and a hole to the west"
+                            + "*------------------------------------------------------------------------*");
                     
                     System.out.println("The weak wall to the west colapsed! You can now contine to travel west if you like.");
                 
