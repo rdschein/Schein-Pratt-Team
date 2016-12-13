@@ -156,14 +156,13 @@ public class GameMenuView extends View {
                 if (DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
                         == DungeonHero.getCurrentGame().getMap().getLocation(4, 1) && DungeonHero.getPlayer().playerInventory[1].getQuantity() == 0) {
                     DungeonHero.getPlayer().playerInventory[1].setQuantity(1);
-                    
+
                     DungeonHero.getCurrentGame().getMap().getLocation(4, 1).getScene().setDescription(
-                                "*------------------------------------------------------------------------*\n"
-                                + "This room is empty now\n"
-                                + "Continue going north or east\n"
-                                + "*------------------------------------------------------------------------*");
-                    
-                    
+                            "*------------------------------------------------------------------------*\n"
+                            + "This room is empty now\n"
+                            + "Continue going north or east\n"
+                            + "*------------------------------------------------------------------------*");
+
                     System.out.println("Congrats! You got the Enchanted Bow! It was said\n"
                             + "That this item was used to hunt down the ghosts the would\n"
                             + "haunt the castles of old.");
@@ -175,13 +174,12 @@ public class GameMenuView extends View {
                 if (DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
                         == DungeonHero.getCurrentGame().getMap().getLocation(0, 4) && DungeonHero.getPlayer().playerInventory[2].getQuantity() == 0) {
                     DungeonHero.getPlayer().playerInventory[2].setQuantity(1);
-                    
+
                     DungeonHero.getCurrentGame().getMap().getLocation(0, 4).getScene().setDescription(
-                                "*------------------------------------------------------------------------*\n"
-                                + "Door way to the South\n"
-                                + "*------------------------------------------------------------------------*");
-                    
-                    
+                            "*------------------------------------------------------------------------*\n"
+                            + "Door way to the South\n"
+                            + "*------------------------------------------------------------------------*");
+
                     System.out.println("Congrats! You got a bag of Bombs! What could \n"
                             + "You do with these?");
                 } else {
@@ -202,19 +200,16 @@ public class GameMenuView extends View {
                 if (DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
                         == DungeonHero.getCurrentGame().getMap().getLocation(0, 5) && DungeonHero.getPlayer().playerInventory[4].getQuantity() == 0) {
                     DungeonHero.getPlayer().playerInventory[4].setQuantity(1);
-                    
-                    
+
                     DungeonHero.getCurrentGame().getMap().getLocation(0, 5).getScene().setDescription("*---------------------------------------------------------*\n"
-                                + "This room is empty now.\n"
-                                + "There is just a large archway to the east\n"
-                                + "*---------------------------------------------------------*\n");
-                    
-                    
+                            + "This room is empty now.\n"
+                            + "There is just a large archway to the east\n"
+                            + "*---------------------------------------------------------*\n");
+
                     System.out.println("Congrats! You got the Sacred Harp! This harp is a royal artifact!\n"
                             + "What could it possibly be doing here?\n "
                             + "It glows with a white light!");
-                    
-                    
+
                 } else {
                     System.out.println("There is no harp to grab");
                 }
@@ -379,23 +374,78 @@ public class GameMenuView extends View {
                 }
                 break;
             case "USE SWORD":
-                 if (DungeonHero.getCurrentGame().getMap().getLocation(3, 4) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol()))
-                 {
-                     System.out.println("You killed the Goblin");
-                 
-                 }else  if (DungeonHero.getCurrentGame().getMap().getLocation(2, 7) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol()))
-                 {
-                     System.out.println("You killed the Goblin");
-                 }else  if (DungeonHero.getCurrentGame().getMap().getLocation(2, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol()))
-                 {
-                     System.out.println("You killed the Goblin");
-                 }else  if (DungeonHero.getCurrentGame().getMap().getLocation(2, 2) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol()))
-                 {
-                     System.out.println("You killed the Knight");
-                 }else  if (DungeonHero.getCurrentGame().getMap().getLocation(0, 6) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol()))
-                 {
-                     System.out.println("You killed the Knight");
-                 }
+                if (DungeonHero.getCurrentGame().getMap().getLocation(3, 4) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    System.out.println("You killed the Goblin");
+
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(2, 7) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    System.out.println("You killed the Goblin");
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(2, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    System.out.println("You killed the Goblin");
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(2, 2) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    System.out.println("You killed the Knight");
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(0, 6) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    System.out.println("You killed the Knight");
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 1) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    System.out.println("You died\n"
+                            + "You will now be returned to the enterance\n"
+                            + "Never Surrender\n");
+                    Point newLocdead = new Point();
+                    newLocdead.x = 4;
+                    newLocdead.y = 4;
+                    try {
+                        moveCharacterToNewLoc(DungeonHero.getPlayer(), newLocdead, DungeonHero.getCurrentGame().getMap().getLocations());
+                    } catch (LocationControlException ex) {
+                        Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    System.out.println("You died\n"
+                            + "You will now be returned to the enterance\n"
+                            + "Never Surrender\n");
+                    Point newLocdead = new Point();
+                    newLocdead.x = 4;
+                    newLocdead.y = 4;
+                    try {
+                        moveCharacterToNewLoc(DungeonHero.getPlayer(), newLocdead, DungeonHero.getCurrentGame().getMap().getLocations());
+                    } catch (LocationControlException ex) {
+                        Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 9) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    System.out.println("You died\n"
+                            + "You will now be returned to the enterance\n"
+                            + "Never Surrender\n");
+                    Point newLocdead = new Point();
+                    newLocdead.x = 4;
+                    newLocdead.y = 4;
+                    try {
+                        moveCharacterToNewLoc(DungeonHero.getPlayer(), newLocdead, DungeonHero.getCurrentGame().getMap().getLocations());
+                    } catch (LocationControlException ex) {
+                        Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(0, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().player.playerInventory[0].getQuantity() != 2) {
+                    System.out.println("Attacking with sword: Is this the best you can do?! You’re weak and will never defeat me! Say goodbye...hero…\n\n");
+
+                    System.out.println("You died\n"
+                            + "You will now be returned to the enterance\n"
+                            + "Never Surrender\n");
+                    Point newLocdead = new Point();
+                    newLocdead.x = 4;
+                    newLocdead.y = 4;
+                    try {
+                        moveCharacterToNewLoc(DungeonHero.getPlayer(), newLocdead, DungeonHero.getCurrentGame().getMap().getLocations());
+                    } catch (LocationControlException ex) {
+                        Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else if (DungeonHero.getCurrentGame().getMap().getLocation(0, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
+                        && DungeonHero.getCurrentGame().player.playerInventory[0].getQuantity() == 2) {
+                    
+                    System.out.println("You did it! You slayed the demon overlord!!!\n\n");
+                    
+                    System.out.println("*-------------------------------------------------------------------*\n"
+                            + "You saved the Princess! You're a real Hero! Your name will echo"
+                            + "throughout history and you will become a Legend!\n"
+                            + "*-------------------------------------------------------------------*");
+                }
                 break;
 
             default:
