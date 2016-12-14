@@ -189,6 +189,8 @@ public class GameControl {
            ObjectInputStream input = new ObjectInputStream(fips);
            
            game = (Game) input.readObject();
+           
+           DungeonHero.setCurrentGame(game);
        }
        catch(Exception e){
            throw new GameControlException(e.getMessage());
