@@ -143,7 +143,7 @@ public class LocationControl {
     }
     
     
-    public int getRandomCol(int col) {
+    public int getRandomCol(int col) throws LocationControlException {
         // Dylan wrote this function
         // Dyaln wrote this function
     
@@ -154,6 +154,11 @@ public class LocationControl {
     }
     while(col < 1){
     col = col + 4;
+    }
+    
+    if (col > 10 || col < 1) 
+    {
+          throw new LocationControlException("Error: The column is greater than 10 and lower than 1");
     }
     return col;
     
