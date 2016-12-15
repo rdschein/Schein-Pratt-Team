@@ -463,7 +463,7 @@ public class GameMenuView extends View {
             case "X":// for Dylan's assignment 9
                 this.viewInventory();
                 break;
-            case "REPORT":
+            case "REPORT":// for Dylan's assignment 11
                 this.console.println("\n\nEnter the file path for file where the game is to be saved");
 
                 String filePath = this.getInput();
