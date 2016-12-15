@@ -460,6 +460,9 @@ public class GameMenuView extends View {
                     System.out.println("You dont have a bow");
                 }
                 break;
+            case "X":
+                this.viewInventory();
+                break;
 
             default:
                 System.out.println("Invaild selection Try again");
@@ -503,7 +506,7 @@ public class GameMenuView extends View {
         Items[] in2 = game.getInventory();
         for (int i = 0; i < inventory.length; i++)// dylan assigment 9
         {
-            if(inventory[i] == in2[i+1])
+            if(inventory[i] == in2[i])
             {
                 System.out.println(i);
             }
