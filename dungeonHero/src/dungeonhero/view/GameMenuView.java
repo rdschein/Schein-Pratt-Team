@@ -489,7 +489,7 @@ public class GameMenuView extends View {
 
         System.out.println(line.toString());
 
-        for (Items item : inventory) {
+        for (Items item : inventory) { // Dylan Indivisual assigment
 
             line = new StringBuilder(
                     line.insert(0, item.getInventoryType()));
@@ -500,6 +500,20 @@ public class GameMenuView extends View {
 
         }
 
+        Items[] in2 = game.getInventory();
+        for (int i = 0; i < inventory.length; i++)// dylan assigment 9
+        {
+            if(inventory[i] == in2[i+1])
+            {
+                System.out.println(i);
+            }
+        
+            else
+            {
+                System.out.println("Nothing");
+            }
+        
+        }
         // Items key = new Items();
         // key.setInventoryType("Key");
         // key.setQuantity(0);
