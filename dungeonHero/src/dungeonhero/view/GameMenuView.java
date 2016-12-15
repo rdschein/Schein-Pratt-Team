@@ -451,9 +451,9 @@ public class GameMenuView extends View {
                 if (DungeonHero.getCurrentGame().player.playerInventory[1].getQuantity() == 1) {
                     if (DungeonHero.getCurrentGame().getMap().getLocation(3, 1) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
                         System.out.println("You killed the Ghost");
-                    }else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    } else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
                         System.out.println("You killed the Ghost");
-                    }else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 9) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                    } else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 9) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
                         System.out.println("You killed the Ghost");
                     }
                 } else {
@@ -462,6 +462,18 @@ public class GameMenuView extends View {
                 break;
             case "X":// for Dylan's assignment 9
                 this.viewInventory();
+                break;
+            case "REPORT":
+                this.console.println("\n\nEnter the file path for file where the game is to be saved");
+
+                String filePath = this.getInput();
+
+                try {
+                    GameControl.getReport2File(filePath);
+                    System.out.println("Writing to file was a success");
+                } catch (Exception ex) {
+                    ErrorView.display("REPORT", ex.getMessage());
+                }
                 break;
 
             default:
@@ -506,16 +518,12 @@ public class GameMenuView extends View {
         Items[] in2 = game.getInventory();
         for (int i = 0; i < inventory.length; i++)// dylan assigment 9
         {
-            if(inventory[i] == in2[i])
-            {
+            if (inventory[i] == in2[i]) {
                 System.out.println(i);
-            }
-        
-            else
-            {
+            } else {
                 System.out.println("Nothing");
             }
-        
+
         }
         // Items key = new Items();
         // key.setInventoryType("Key");
