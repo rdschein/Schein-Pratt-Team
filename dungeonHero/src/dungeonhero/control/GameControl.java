@@ -14,8 +14,12 @@ import dungeonhero.Location;
 import dungeonhero.Map;
 import dungeonhero.Scene;
 import dungeonhero.exceptions.GameControlException;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
@@ -195,6 +199,23 @@ public class GameControl {
        catch(Exception e){
            throw new GameControlException(e.getMessage());
        }
+    }
+
+    public static void getReport2File(String filePath) // assigment 11
+        throws GameControlException{
+        
+        try( BufferedReader in = new BufferedReader(new FileReader(filePath));
+              BufferedWriter out = new BufferedWriter(new FileWriter(filePath)))
+        {
+            String text = "This game is awesome!";
+            while((text = in.readLine())!= null)
+            {
+                out.write(text);
+            }
+        }catch(Exception e)
+        {
+            throw new GameControlException(e.getMessage());
+        }
     }
 
     private static class health {
