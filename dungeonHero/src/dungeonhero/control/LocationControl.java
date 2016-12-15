@@ -58,7 +58,7 @@ public class LocationControl {
                 coordinates.y < 0 ||
                 coordinates.y > 10)
         {
-        throw new LocationControlException("Error: new Locations are out of bounds");
+        throw new LocationControlException("Error: new Locations are out of bounds"); // Dylan Assigment 10
         }
       
         Location oldLocation = locations[character.getActorRow()][character.getActorCol()]; // testing
@@ -120,10 +120,10 @@ public class LocationControl {
            if(value.equals("Q"))
                break;
             try{   
-            row = Integer.parseInt(value);
+            row = Integer.parseInt(value); // dylan assigment 10
             }catch(NumberFormatException nf)
             {
-                System.out.println("\nYou must enter a vaild number. Try again");
+                System.out.println("\nNumberFormatExpection: You must enter a vaild number. Try again");
             }
        }
         

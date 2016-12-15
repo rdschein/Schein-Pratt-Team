@@ -460,7 +460,7 @@ public class GameMenuView extends View {
                     System.out.println("You dont have a bow");
                 }
                 break;
-            case "X":
+            case "X":// for Dylan's assignment 9
                 this.viewInventory();
                 break;
 
