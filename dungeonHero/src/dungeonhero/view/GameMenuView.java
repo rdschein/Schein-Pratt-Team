@@ -438,13 +438,26 @@ public class GameMenuView extends View {
                     }
                 } else if (DungeonHero.getCurrentGame().getMap().getLocation(0, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())
                         && DungeonHero.getCurrentGame().player.playerInventory[0].getQuantity() == 2) {
-                    
+
                     System.out.println("You did it! You slayed the demon overlord!!!\n\n");
-                    
+
                     System.out.println("*-------------------------------------------------------------------*\n"
                             + "You saved the Princess! You're a real Hero! Your name will echo"
                             + "throughout history and you will become a Legend!\n"
                             + "*-------------------------------------------------------------------*");
+                }
+                break;
+            case "USE BOW":
+                if (DungeonHero.getCurrentGame().player.playerInventory[1].getQuantity() == 1) {
+                    if (DungeonHero.getCurrentGame().getMap().getLocation(3, 1) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                        System.out.println("You killed the Ghost");
+                    }else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 0) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                        System.out.println("You killed the Ghost");
+                    }else if (DungeonHero.getCurrentGame().getMap().getLocation(3, 9) == DungeonHero.getCurrentGame().getMap().getLocation(DungeonHero.getPlayer().getActorRow(), DungeonHero.getPlayer().getActorCol())) {
+                        System.out.println("You killed the Ghost");
+                    }
+                } else {
+                    System.out.println("You dont have a bow");
                 }
                 break;
 
