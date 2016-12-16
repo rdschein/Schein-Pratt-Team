@@ -46,11 +46,11 @@ public class LocationControl {
     {
         if(character == null)
         {
-        System.out.println("The problem is with the character");
+        throw new LocationControlException("The problem is with the character");
         }
         if(locations == null)
         {
-        System.out.println("The problem is with the locations");
+        throw new LocationControlException("The problem is with the locations");
         }
         if(coordinates == null || 
                 coordinates.x < 0 ||
