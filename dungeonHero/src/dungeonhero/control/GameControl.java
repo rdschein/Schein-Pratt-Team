@@ -217,6 +217,23 @@ public class GameControl {
             throw new GameControlException(e.getMessage());
         }
     }
+    
+    public static void getReportToFile(String filePath) //Rob assignment 11
+            throws GameControlException {
+        try( BufferedReader in = new BufferedReader(new FileReader(filePath));
+             BufferedWriter out = new BufferedWriter(new FileWriter(filePath)))
+        {
+            String text = "Dungeon Hero was written by Dylan Pratt and Rob Schein\n"
+                        + "at Brigham Young University-Idaho for the CIT 260 class.";
+            while ((text = in.readLine()) != null)
+            {
+                out.write(text);
+            }
+        } catch(Exception e)
+        {
+            throw new GameControlException(e.getMessage());
+        }
+    }
 
     private static class health {
 

@@ -25,6 +25,7 @@ public class MainMenuView extends View {
                   + "\nS-Save Game"
                   + "\nE-Exit"
                   + "\nH-Help"
+                  + "\nA-About"
                   + "\n---------------------------------");
 }
 
@@ -44,6 +45,18 @@ public class MainMenuView extends View {
                 break;
             case "H":
                 this.displayHelpMenu();
+                break;
+            case "A": //Rob assignment 11
+                this.console.println("\n\nEnter the file path for file where the game is to be saved");
+
+                String filePath = this.getInput();
+
+                try {
+                    GameControl.getReportToFile(filePath);
+                    System.out.println("Writing to file was a success");
+                } catch (Exception ex) {
+                    ErrorView.display("REPORT", ex.getMessage());
+                }
                 break;
             default:
                 System.out.println("Invaild selection Try again");

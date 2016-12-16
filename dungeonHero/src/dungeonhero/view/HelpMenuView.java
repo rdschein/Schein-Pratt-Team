@@ -99,6 +99,7 @@ public class HelpMenuView extends View {
                 System.out.println("Possible items in game");
                 this.viewInventory();
                 break;
+           
                 
             default:
                 System.out.println("Invaild selection Try again");
